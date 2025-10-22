@@ -15,18 +15,21 @@ const Hero = () => {
       {/* Hero Video Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center">
         <div className="absolute inset-0">
-          <video 
-            autoPlay 
-            muted 
-            loop 
+          <video
+            autoPlay
+            muted
+            loop
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
+            style={{
+              WebkitPlaysinline: 'true'
+            } as React.CSSProperties}
           >
-            <source src="https://www.dropbox.com/scl/fi/7e4bw8r8orizbm3nijfgi/A-1.mp4?rlkey=oq49e5dkp9ioanhi2ps5lfry3&st=vygf0txs&dl=1" type="video/mp4" />
-            <source src="https://www.dropbox.com/scl/fi/7e4bw8r8orizbm3nijfgi/A-1.mp4?rlkey=oq49e5dkp9ioanhi2ps5lfry3&st=vygf0txs&dl=0" type="video/mp4" />
+            <source src="https://www.dropbox.com/scl/fi/7e4bw8r8orizbm3nijfgi/A-1.mp4?rlkey=oq49e5dkp9ioanhi2ps5lfry3&st=vygf0txs&raw=1" type="video/mp4" />
           </video>
         </div>
-        
+
         {/* Scroll Arrow */}
         <button
           onClick={scrollToNext}
