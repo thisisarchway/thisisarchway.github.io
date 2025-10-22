@@ -32,8 +32,8 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
               className="hover:opacity-80 transition-opacity duration-300"
             >
-              <img 
-                src="https://www.dropbox.com/scl/fi/81j0ivblf1uagj7pqrojh/A-black.jpg?rlkey=lh6sj5t3wkxm7atdz9u6b30kq&st=s54f1jbo&dl=1"
+              <img
+                src="/logo.jpg"
                 alt="Archway Productions Logo"
                 className="w-32 h-auto"
               />
