@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="absolute inset-0" style={{ isolation: 'isolate' }}>
           {!videoLoaded && (
             <img
-              src="/hero_still.jpg"
+              src="/hero_still copy copy.jpg"
               alt="Archway Productions"
               className="w-full h-full object-cover"
             />
