@@ -15,11 +15,15 @@ const Hero = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center">
         <div className="absolute inset-0">
-          <img
-            src="/logo.jpg"
-            alt="Archway Productions"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover opacity-50"
-          />
+          >
+            <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&dl=1" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
         </div>
 
