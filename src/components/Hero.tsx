@@ -4,9 +4,19 @@ import AnimatedButton from './AnimatedButton';
 
 const Hero = () => {
   const [videoError, setVideoError] = React.useState(false);
+  const [showFallback, setShowFallback] = React.useState(false);
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
   React.useEffect(() => {
+    // Check connection speed and show fallback on slow connections
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      if (connection && (connection.saveData || connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g')) {
+        setShowFallback(true);
+        return;
+      }
+    }
+
     const video = videoRef.current;
     if (video) {
       video.muted = true;
@@ -41,13 +51,15 @@ const Hero = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center" style={{ willChange: 'auto' }}>
         <div className="absolute inset-0" style={{ isolation: 'isolate' }}>
-          {!videoError ? (
+          {!videoError && !showFallback ? (
             <video
               ref={videoRef}
               autoPlay
               loop
               muted
               playsInline
+              disablePictureInPicture
+              disableRemotePlayback
               poster="/hero_still.jpg"
               preload="metadata"
               className="w-full h-full object-cover"
@@ -59,6 +71,7 @@ const Hero = () => {
                 backfaceVisibility: 'hidden',
                 perspective: 1000
               }}
+              x-webkit-airplay="deny"
             >
               <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&raw=1" type="video/mp4" />
             </video>
