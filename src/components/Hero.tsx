@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import AnimatedButton from './AnimatedButton';
 
 const Hero = () => {
-  const [imageLoaded, setImageLoaded] = React.useState(false);
+  const [videoLoaded, setVideoLoaded] = React.useState(false);
 
   const scrollToNext = () => {
     const introSection = document.getElementById('intro');
@@ -17,20 +17,23 @@ const Hero = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center" style={{ willChange: 'auto' }}>
         <div className="absolute inset-0" style={{ isolation: 'isolate' }}>
-          {!imageLoaded && (
+          {!videoLoaded && (
             <img
               src="/hero_still.jpg"
               alt="Archway Productions"
               className="w-full h-full object-cover"
             />
           )}
-          <img
-            src="/untitled_design_(1).gif"
-            alt="Archway Productions"
+          <video
+            src="https://www.dropbox.com/scl/fi/f48v1r3w0p0w80p4l8jut/Hero-Vid.mp4?rlkey=w0ezy7rcmqu2ezphisvqzscbc&st=ctvjanqb&dl=1"
             className="w-full h-full object-cover"
-            onLoad={() => setImageLoaded(true)}
+            autoPlay
+            loop
+            muted
+            playsInline
+            onLoadedData={() => setVideoLoaded(true)}
             style={{
-              opacity: imageLoaded ? 1 : 0,
+              opacity: videoLoaded ? 1 : 0,
               transition: 'opacity 0.3s ease-in-out',
               WebkitTransform: 'translateZ(0)',
               transform: 'translateZ(0)',
