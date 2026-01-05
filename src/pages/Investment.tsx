@@ -47,23 +47,6 @@ const Investment = () => {
     }
   ];
 
-  const investmentTiers = [
-    {
-      title: "Creative Partner",
-      amount: "$25K - $100K",
-      benefits: ["Executive Producer Credit", "Set Visits", "Premiere Access", "Quarterly Updates"]
-    },
-    {
-      title: "Strategic Investor",
-      amount: "$100K - $500K",
-      benefits: ["Co-Producer Credit", "Creative Input", "Revenue Sharing", "Portfolio Access", "Industry Events"]
-    },
-    {
-      title: "Founding Partner",
-      amount: "$500K+",
-      benefits: ["Producer Credit", "Board Seat", "Project Selection Input", "Maximum Revenue Share", "Full Access"]
-    }
-  ];
 
   return (
     <Layout>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Film, TrendingUp, Users, Globe, Lightbulb, Target, Award, DollarSign } from 'lucide-react';
+import { Film, TrendingUp, Users, Globe, Lightbulb, DollarSign } from 'lucide-react';
 import AnimatedButton from '../components/AnimatedButton';
 import Layout from '../components/Layout';
 
