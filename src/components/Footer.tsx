@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Instagram } from 'lucide-react';
+import { Mail, Instagram, Newspaper } from 'lucide-react';
 import NewsletterForm from './NewsletterForm';
 
 const Footer = () => {
@@ -70,6 +70,15 @@ const Footer = () => {
                 aria-label="Follow us on Instagram"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://substack.com/@thisisarchway"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Subscribe to our Substack"
+              >
+                <Newspaper className="w-5 h-5" />
               </a>
             </div>
             <p className="text-gray-400 text-sm">New York City, NY</p>
