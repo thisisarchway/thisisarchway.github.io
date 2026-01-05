@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Instagram, MapPin } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const Contact = () => {
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
+
+  useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const hasReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setShouldLoadVideo(!isMobile && !hasReducedMotion);
+  }, []);
+
   return (
     <Layout>
       <div className="min-h-screen bg-black">
       <Helmet>
         <title>Contact Archway Productions</title>
         <meta name="description" content="Get in touch with Archway Productions. Whether you're a creator, investor, or collaborator, we'd love to hear from you." />
+        <link rel="canonical" href="https://thisisarchway.com/contact" />
         <meta property="og:title" content="Contact Archway Productions" />
         <meta property="og:description" content="Get in touch with Archway Productions. Whether you're a creator, investor, or collaborator, we'd love to hear from you." />
       </Helmet>
@@ -18,7 +27,7 @@ const Contact = () => {
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
             Get In Touch
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
             Whether you're a creator, investor, or collaborator, we'd love to hear from you.
           </p>
@@ -26,15 +35,17 @@ const Contact = () => {
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-16 md:p-20 relative overflow-hidden aspect-[4/3] flex items-center justify-center">
               {/* Background Video */}
-              <video 
-                autoPlay 
-                muted 
-                loop 
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover opacity-20 rounded-lg"
-              >
-                <source src="https://i.imgur.com/4iXOjRF.mp4" type="video/mp4" />
-              </video>
+              {shouldLoadVideo && (
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover opacity-20 rounded-lg"
+                >
+                  <source src="https://i.imgur.com/4iXOjRF.mp4" type="video/mp4" />
+                </video>
+              )}
               
               {/* Content */}
               <div className="relative z-10 w-full">

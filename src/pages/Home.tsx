@@ -13,6 +13,7 @@ const Home = () => {
         <Helmet>
           <title>Archway Productions - Original Storytelling for the Future</title>
           <meta name="description" content="At Archway Productions, the future is not franchised. We're retiring the reboots and making room for quality, original projects." />
+          <link rel="canonical" href="https://thisisarchway.com/" />
           <meta property="og:title" content="Archway Productions - Original Storytelling for the Future" />
           <meta property="og:description" content="At Archway Productions, the future is not franchised. We're retiring the reboots and making room for quality, original projects." />
         </Helmet>

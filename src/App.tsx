@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import ErrorBoundary from './components/ErrorBoundary';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Investment from './pages/Investment';
-import Collaborators from './pages/Collaborators';
-import Contact from './pages/Contact';
-import Shop from './pages/Shop';
-import NotFound from './pages/NotFound';
+import StructuredData from './components/StructuredData';
+
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Projects = lazy(() => import('./pages/Projects'));
+const Investment = lazy(() => import('./pages/Investment'));
+const Collaborators = lazy(() => import('./pages/Collaborators'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Shop = lazy(() => import('./pages/Shop'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function ScrollToTop() {
   const location = useLocation();
@@ -36,19 +38,26 @@ function App() {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://thisisarchway.com" />
         </Helmet>
+        <StructuredData />
         <div className="min-h-screen bg-black">
           <ScrollToTop />
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/investment" element={<Investment />} />
-            <Route path="/collaborators" element={<Collaborators />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={
+            <div className="min-h-screen bg-black flex items-center justify-center">
+              <div className="text-white text-xl">Loading...</div>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/investment" element={<Investment />} />
+              <Route path="/collaborators" element={<Collaborators />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </div>
       </Router>
     </ErrorBoundary>

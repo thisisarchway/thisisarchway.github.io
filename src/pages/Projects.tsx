@@ -36,6 +36,7 @@ const Projects = () => {
       <Helmet>
         <title>Projects - Archway Productions</title>
         <meta name="description" content="Explore Archway Productions' current projects including Vital and Leaping - original stories for the digital generation." />
+        <link rel="canonical" href="https://thisisarchway.com/projects" />
         <meta property="og:title" content="Projects - Archway Productions" />
         <meta property="og:description" content="Explore Archway Productions' current projects including Vital and Leaping - original stories for the digital generation." />
       </Helmet>

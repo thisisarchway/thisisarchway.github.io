@@ -73,6 +73,7 @@ const Collaborators = () => {
       <Helmet>
         <title>Join Our Creative Collective - Archway Productions</title>
         <meta name="description" content="Collaborate with Archway Productions. We support emerging filmmakers, producers, content creators, and writers with funding, development, and distribution." />
+        <link rel="canonical" href="https://thisisarchway.com/collaborators" />
         <meta property="og:title" content="Join Our Creative Collective - Archway Productions" />
         <meta property="og:description" content="Collaborate with Archway Productions. We support emerging filmmakers, producers, content creators, and writers with funding, development, and distribution." />
       </Helmet>

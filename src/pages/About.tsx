@@ -15,6 +15,7 @@ const About = () => {
       <Helmet>
         <title>About Archway Productions - Gen Z Media Company</title>
         <meta name="description" content="Founded in 2024 by young entertainment industry professionals, Archway Productions is redefining how stories get made, from concept to screen." />
+        <link rel="canonical" href="https://thisisarchway.com/about" />
         <meta property="og:title" content="About Archway Productions - Gen Z Media Company" />
         <meta property="og:description" content="Founded in 2024 by young entertainment industry professionals, Archway Productions is redefining how stories get made, from concept to screen." />
       </Helmet>

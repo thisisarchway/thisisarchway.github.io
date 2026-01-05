@@ -21,10 +21,10 @@ const Header = () => {
       </button>
 
       {/* Sidebar */}
-      <div 
-        className={`fixed left-0 top-0 h-full w-80 bg-black text-white z-40 transform transition-transform duration-300 ${
+      <div
+        className={`fixed left-0 top-0 h-full w-full sm:w-80 bg-black text-white z-40 transform transition-transform duration-300 ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:w-80 w-full`}
+        }`}
       >
         <div className="flex flex-col h-full justify-between p-8">
           {/* Logo/Image at top of sidebar */}
@@ -38,6 +38,7 @@ const Header = () => {
                 src="/logo.jpg"
                 alt="Archway Productions Logo"
                 className="w-32 h-auto"
+                loading="lazy"
               />
             </Link>
           </div>

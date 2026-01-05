@@ -71,6 +71,7 @@ const Investment = () => {
       <Helmet>
         <title>Investment Opportunities - Archway Productions</title>
         <meta name="description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
+        <link rel="canonical" href="https://thisisarchway.com/investment" />
         <meta property="og:title" content="Investment Opportunities - Archway Productions" />
         <meta property="og:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
       </Helmet>

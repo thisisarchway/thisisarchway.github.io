@@ -1,30 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Instagram } from 'lucide-react';
 import AnimatedButton from '../components/AnimatedButton';
 import Layout from '../components/Layout';
 
 const Shop = () => {
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
+
+  useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const hasReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setShouldLoadVideo(!isMobile && !hasReducedMotion);
+  }, []);
+
   return (
     <Layout>
       <div className="min-h-screen bg-black relative">
       <Helmet>
         <title>Shop - Archway Productions</title>
         <meta name="description" content="Archway Productions shop coming soon. Exclusive merchandise and limited-edition items celebrating independent filmmaking and original storytelling." />
+        <link rel="canonical" href="https://thisisarchway.com/shop" />
         <meta property="og:title" content="Shop - Archway Productions" />
         <meta property="og:description" content="Archway Productions shop coming soon. Exclusive merchandise and limited-edition items celebrating independent filmmaking and original storytelling." />
       </Helmet>
       {/* Full page MP4 video background */}
-      <video 
-        autoPlay 
-        muted 
-        loop 
-        playsInline
-        className="fixed inset-0 w-full h-full object-cover opacity-20"
-        style={{ zIndex: 0 }}
-      >
-        <source src="https://i.imgur.com/6NgFNM9.mp4" type="video/mp4" />
-      </video>
+      {shouldLoadVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="fixed inset-0 w-full h-full object-cover opacity-20"
+          style={{ zIndex: 0 }}
+        >
+          <source src="https://i.imgur.com/6NgFNM9.mp4" type="video/mp4" />
+        </video>
+      )}
       
       <div className="pt-20 pb-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto relative z-10">
