@@ -10,19 +10,21 @@ const Contact = () => {
         </p>
         
         <div className="flex justify-center space-x-6 md:space-x-8">
-          <a 
-            href="mailto:contact@thisisarchway.com" 
+          <a
+            href="mailto:contact@thisisarchway.com"
             className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-12 h-12 flex items-center justify-center"
-            title="Email us"
+            aria-label="Email us at contact@thisisarchway.com"
           >
-           <Mail className="w-6 h-6" />
+            <Mail className="w-6 h-6" />
           </a>
-          <a 
-            href="https://instagram.com/thisisarchway" 
+          <a
+            href="https://instagram.com/thisisarchway"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-12 h-12 flex items-center justify-center"
-            title="Follow us on Instagram"
+            aria-label="Follow us on Instagram"
           >
-           <Instagram className="w-6 h-6" />
+            <Instagram className="w-6 h-6" />
           </a>
         </div>
       </div>

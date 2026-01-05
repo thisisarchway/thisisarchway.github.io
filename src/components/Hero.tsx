@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import AnimatedButton from './AnimatedButton';
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -54,25 +54,9 @@ const Hero = () => {
           </p>
           
           <div className="mt-8 md:mt-12">
-            <Link
-              to="/about"
-              className="inline-block bg-white text-black px-8 py-3 font-medium hover:bg-gray-200 transition-all duration-300 rounded-lg relative overflow-hidden group"
-              style={{
-                backgroundImage: 'none'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundImage = "url('https://i.imgur.com/bLzVZKt.gif')";
-                e.currentTarget.style.backgroundSize = 'cover';
-                e.currentTarget.style.backgroundPosition = 'center';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundImage = 'none';
-              }}
-            >
-              <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+            <AnimatedButton to="/about">
               About Archway
-              </span>
-            </Link>
+            </AnimatedButton>
           </div>
         </div>
       </section>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Film, TrendingUp, Users, Globe, Lightbulb, Target, Award, DollarSign } from 'lucide-react';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import AnimatedButton from '../components/AnimatedButton';
+import Layout from '../components/Layout';
 
 const Collaborators = () => {
   const services = [
@@ -68,7 +68,8 @@ const Collaborators = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <Layout>
+      <div className="min-h-screen bg-black">
       <Helmet>
         <title>Join Our Creative Collective - Archway Productions</title>
         <meta name="description" content="Collaborate with Archway Productions. We support emerging filmmakers, producers, content creators, and writers with funding, development, and distribution." />
@@ -293,32 +294,15 @@ const Collaborators = () => {
               We're here for stories that defy expectations and leave a mark. If that's yours, submit your project for consideration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:contact@thisisarchway.com" 
-                className="bg-white text-black px-8 py-3 font-medium hover:bg-gray-200 transition-all duration-300 rounded-lg relative overflow-hidden group"
-                style={{
-                  backgroundImage: 'none'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundImage = "url('https://i.imgur.com/bLzVZKt.gif')";
-                  e.currentTarget.style.backgroundSize = 'cover';
-                  e.currentTarget.style.backgroundPosition = 'center';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundImage = 'none';
-                }}
-              >
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                  Submit Your Project
-                </span>
-              </a>
+              <AnimatedButton href="mailto:contact@thisisarchway.com">
+                Submit Your Project
+              </AnimatedButton>
             </div>
           </div>
         </div>
       </div>
-      <Contact />
-      <Footer />
-    </div>
+      </div>
+    </Layout>
   );
 };
 

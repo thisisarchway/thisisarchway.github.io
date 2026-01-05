@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedButton from './AnimatedButton';
 
 const NewsletterForm = () => {
   return (
@@ -27,25 +28,9 @@ const NewsletterForm = () => {
         <input type="hidden" name="current_referrer" value="" />
         <input type="hidden" name="referral_code" value="" />
         <input type="hidden" name="source" value="embed" />
-        <button 
-          type="submit"
-          className="bg-white text-black px-6 py-3 font-medium hover:bg-gray-200 transition-all duration-300 rounded-lg whitespace-nowrap relative overflow-hidden group"
-          style={{
-            backgroundImage: 'none'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundImage = "url('https://i.imgur.com/bLzVZKt.gif')";
-            e.currentTarget.style.backgroundSize = 'cover';
-            e.currentTarget.style.backgroundPosition = 'center';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundImage = 'none';
-          }}
-        >
-          <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-            Subscribe
-          </span>
-        </button>
+        <AnimatedButton type="submit" className="whitespace-nowrap">
+          Subscribe
+        </AnimatedButton>
       </form>
     </div>
   );

@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, Instagram, MapPin, Phone } from 'lucide-react';
-import Footer from '../components/Footer';
+import { Mail, Instagram, MapPin } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <Layout>
+      <div className="min-h-screen bg-black">
       <Helmet>
         <title>Contact Archway Productions</title>
         <meta name="description" content="Get in touch with Archway Productions. Whether you're a creator, investor, or collaborator, we'd love to hear from you." />
@@ -71,8 +72,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+      </div>
+    </Layout>
   );
 };
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Instagram } from 'lucide-react';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import AnimatedButton from '../components/AnimatedButton';
+import Layout from '../components/Layout';
 
 const Shop = () => {
   return (
-    <div className="min-h-screen bg-black relative">
+    <Layout>
+      <div className="min-h-screen bg-black relative">
       <Helmet>
         <title>Shop - Archway Productions</title>
         <meta name="description" content="Archway Productions shop coming soon. Exclusive merchandise and limited-edition items celebrating independent filmmaking and original storytelling." />
@@ -54,35 +55,18 @@ const Shop = () => {
                 Be the First to Know
               </h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Follow us on Instagram to get exclusive early access to our shop launch, 
+                Follow us on Instagram to get exclusive early access to our shop launch,
                 behind-the-scenes content, and limited-edition releases.
               </p>
-              <a 
-                href="https://instagram.com/thisisarchway" 
-                className="inline-block bg-white text-black px-8 py-3 font-medium hover:bg-gray-200 transition-all duration-300 rounded-lg relative overflow-hidden group"
-                style={{
-                  backgroundImage: 'none'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundImage = "url('https://i.imgur.com/bLzVZKt.gif')";
-                  e.currentTarget.style.backgroundSize = 'cover';
-                  e.currentTarget.style.backgroundPosition = 'center';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundImage = 'none';
-                }}
-              >
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+              <AnimatedButton href="https://instagram.com/thisisarchway">
                 Follow @thisisarchway
-                </span>
-              </a>
+              </AnimatedButton>
             </div>
           </div>
         </div>
       </div>
-      <Contact />
-      <Footer />
-    </div>
+      </div>
+    </Layout>
   );
 };
 

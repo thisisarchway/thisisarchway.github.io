@@ -11,9 +11,11 @@ const Header = () => {
   return (
     <>
       {/* Menu Toggle Button */}
-      <button 
+      <button
         onClick={toggleMenu}
         className="fixed top-6 left-6 z-50 w-10 h-10 flex items-center justify-center bg-black/80 backdrop-blur-sm rounded-full border border-white/20 hover:bg-black transition-all duration-300 opacity-70 hover:opacity-100"
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isMenuOpen}
       >
         {isMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
       </button>
@@ -43,7 +45,7 @@ const Header = () => {
           {/* Navigation Section */}
           <div className="flex flex-col items-center">
             {/* Navigation */}
-            <nav>
+            <nav aria-label="Main navigation">
               <ul className="space-y-4 md:space-y-6 text-center">
                 <li>
                   <Link 
@@ -128,19 +130,21 @@ const Header = () => {
 
           {/* Social Media Icons */}
           <div className="flex justify-center space-x-8">
-            <a 
-              href="mailto:contact@thisisarchway.com" 
-             className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-12 h-12 flex items-center justify-center"
-              title="Email us"
-            >
-             <Mail className="w-6 h-6" />
-            </a>
-            <a 
-              href="https://instagram.com/thisisarchway" 
+            <a
+              href="mailto:contact@thisisarchway.com"
               className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-12 h-12 flex items-center justify-center"
-              title="Follow us on Instagram"
+              aria-label="Email us at contact@thisisarchway.com"
             >
-             <Instagram className="w-6 h-6" />
+              <Mail className="w-6 h-6" />
+            </a>
+            <a
+              href="https://instagram.com/thisisarchway"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-12 h-12 flex items-center justify-center"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram className="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -148,11 +152,12 @@ const Header = () => {
 
       {/* Overlay */}
       {isMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-30"
           onClick={() => {
             setIsMenuOpen(false);
           }}
+          aria-hidden="true"
         />
       )}
     </>

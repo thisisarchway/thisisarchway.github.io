@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 const Projects = () => {
   const projects = [
@@ -32,7 +31,8 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <Layout>
+      <div className="min-h-screen bg-black">
       <Helmet>
         <title>Projects - Archway Productions</title>
         <meta name="description" content="Explore Archway Productions' current projects including Vital and Leaping - original stories for the digital generation." />
@@ -85,9 +85,8 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <Contact />
-      <Footer />
-    </div>
+      </div>
+    </Layout>
   );
 };
 
