@@ -33,7 +33,7 @@ const Hero = () => {
               loop
               muted
               playsInline
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover"
               onError={() => setVideoError(true)}
             >
               <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&raw=1" type="video/mp4" />
@@ -42,11 +42,11 @@ const Hero = () => {
             <img
               src="/hero_still.jpg"
               alt="Archway Productions"
-              className="w-full h-full object-cover opacity-90"
+              className="w-full h-full object-cover"
               loading="lazy"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
         </div>
 
         {/* Scroll Arrow */}
