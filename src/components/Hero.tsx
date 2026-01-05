@@ -33,6 +33,8 @@ const Hero = () => {
               loop
               muted
               playsInline
+              poster="/hero_still.jpg"
+              preload="metadata"
               className="w-full h-full object-cover"
               onError={() => setVideoError(true)}
             >
@@ -43,7 +45,6 @@ const Hero = () => {
               src="/hero_still.jpg"
               alt="Archway Productions"
               className="w-full h-full object-cover"
-              loading="lazy"
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
