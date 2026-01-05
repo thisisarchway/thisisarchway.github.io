@@ -40,7 +40,7 @@ const Hero = () => {
             </video>
           ) : (
             <img
-              src="/logo.jpg"
+              src="/hero_still.jpg"
               alt="Archway Productions"
               className="w-full h-full object-cover opacity-90"
               loading="lazy"
