@@ -3,6 +3,17 @@ import { ChevronDown } from 'lucide-react';
 import AnimatedButton from './AnimatedButton';
 
 const Hero = () => {
+  const [videoError, setVideoError] = React.useState(false);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        setVideoError(true);
+      });
+    }
+  }, []);
+
   const scrollToNext = () => {
     const introSection = document.getElementById('intro');
     if (introSection) {
@@ -15,15 +26,25 @@ const Hero = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center">
         <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-50"
-          >
-            <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&dl=1" type="video/mp4" />
-          </video>
+          {!videoError ? (
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover opacity-50"
+              onError={() => setVideoError(true)}
+            >
+              <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&raw=1" type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              src="/logo.jpg"
+              alt="Archway Productions"
+              className="w-full h-full object-cover opacity-50"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
         </div>
 
