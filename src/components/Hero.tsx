@@ -39,8 +39,8 @@ const Hero = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center">
-        <div className="absolute inset-0">
+      <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center" style={{ willChange: 'auto' }}>
+        <div className="absolute inset-0" style={{ isolation: 'isolate' }}>
           {!videoError ? (
             <video
               ref={videoRef}
@@ -49,10 +49,16 @@ const Hero = () => {
               muted
               playsInline
               poster="/hero_still.jpg"
-              preload="auto"
+              preload="metadata"
               className="w-full h-full object-cover"
               onError={() => setVideoError(true)}
-              style={{ WebkitTransform: 'translateZ(0)' }}
+              style={{
+                WebkitTransform: 'translateZ(0)',
+                transform: 'translateZ(0)',
+                willChange: 'transform',
+                backfaceVisibility: 'hidden',
+                perspective: 1000
+              }}
             >
               <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&raw=1" type="video/mp4" />
             </video>
@@ -69,10 +75,11 @@ const Hero = () => {
         {/* Scroll Arrow */}
         <button
           onClick={scrollToNext}
-          className="relative z-10 mb-12 group animate-bounce"
+          className="relative z-10 mb-12 group"
           aria-label="Scroll to next section"
+          style={{ willChange: 'transform' }}
         >
-          <ChevronDown className="w-8 h-8 text-white/80 group-hover:text-white transition-all duration-300 drop-shadow-lg" />
+          <ChevronDown className="w-8 h-8 text-white/80 group-hover:text-white transition-colors duration-300 drop-shadow-lg" />
         </button>
       </section>
 
