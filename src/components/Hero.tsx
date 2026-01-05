@@ -3,41 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import AnimatedButton from './AnimatedButton';
 
 const Hero = () => {
-  const [videoError, setVideoError] = React.useState(false);
-  const [showFallback, setShowFallback] = React.useState(false);
-  const videoRef = React.useRef<HTMLVideoElement>(null);
-
-  React.useEffect(() => {
-    // Check connection speed and show fallback on slow connections
-    if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
-      if (connection && (connection.saveData || connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g')) {
-        setShowFallback(true);
-        return;
-      }
-    }
-
-    const video = videoRef.current;
-    if (video) {
-      video.muted = true;
-      video.volume = 0;
-      video.setAttribute('webkit-playsinline', 'true');
-
-      const attemptPlay = () => {
-        video.play().catch((error) => {
-          console.log('Video autoplay failed:', error);
-          setVideoError(true);
-        });
-      };
-
-      if (video.readyState >= 3) {
-        attemptPlay();
-      } else {
-        video.addEventListener('loadedmetadata', attemptPlay, { once: true });
-        video.addEventListener('canplay', attemptPlay, { once: true });
-      }
-    }
-  }, []);
+  const [imageLoaded, setImageLoaded] = React.useState(false);
 
   const scrollToNext = () => {
     const introSection = document.getElementById('intro');
@@ -51,37 +17,26 @@ const Hero = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center" style={{ willChange: 'auto' }}>
         <div className="absolute inset-0" style={{ isolation: 'isolate' }}>
-          {!videoError && !showFallback ? (
-            <video
-              ref={videoRef}
-              autoPlay
-              loop
-              muted
-              playsInline
-              disablePictureInPicture
-              disableRemotePlayback
-              poster="/hero_still.jpg"
-              preload="metadata"
-              className="w-full h-full object-cover"
-              onError={() => setVideoError(true)}
-              style={{
-                WebkitTransform: 'translateZ(0)',
-                transform: 'translateZ(0)',
-                willChange: 'transform',
-                backfaceVisibility: 'hidden',
-                perspective: 1000
-              }}
-              x-webkit-airplay="deny"
-            >
-              <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&raw=1" type="video/mp4" />
-            </video>
-          ) : (
+          {!imageLoaded && (
             <img
               src="/hero_still.jpg"
               alt="Archway Productions"
               className="w-full h-full object-cover"
             />
           )}
+          <img
+            src="/untitled_design_(1).gif"
+            alt="Archway Productions"
+            className="w-full h-full object-cover"
+            onLoad={() => setImageLoaded(true)}
+            style={{
+              opacity: imageLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease-in-out',
+              WebkitTransform: 'translateZ(0)',
+              transform: 'translateZ(0)',
+              backfaceVisibility: 'hidden'
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
         </div>
 
