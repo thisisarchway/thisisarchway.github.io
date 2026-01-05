@@ -11,7 +11,7 @@ const NewsletterForm = () => {
         Be the first to know about new projects, shop launches, and exclusive behind-the-scenes content.
       </p>
       <form
-        action="https://archwayproductions.substack.com/api/v1/free?nojs=true"
+        action="https://thisisarchway.substack.com/api/v1/free?nojs=true"
         method="post"
         className="flex flex-col sm:flex-row gap-4 max-w-sm mx-auto"
       >
