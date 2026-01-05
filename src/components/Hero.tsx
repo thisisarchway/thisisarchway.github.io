@@ -35,7 +35,7 @@ const Hero = () => {
                 WebkitPlaysinline: 'true'
               } as React.CSSProperties}
             >
-              <source src="https://www.dropbox.com/scl/fi/7e4bw8r8orizbm3nijfgi/A-1.mp4?rlkey=oq49e5dkp9ioanhi2ps5lfry3&st=vygf0txs&raw=1" type="video/mp4" />
+              <source src="/hero_vid.mp4" type="video/mp4" />
             </video>
           </div>
         ) : (
