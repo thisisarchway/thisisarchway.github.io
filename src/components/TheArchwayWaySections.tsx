@@ -40,7 +40,7 @@ const TheArchwayWaySections = () => {
         
         <div className="flex flex-col md:flex-row w-full h-[400px] overflow-hidden rounded-lg">
           {principles.map((principle, index) => (
-            <div 
+            <div
               key={index}
               className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out
                 ${hoveredIndex === index ? 'flex-[3] md:flex-[5]' : 'flex-1'}
@@ -48,6 +48,16 @@ const TheArchwayWaySections = () => {
               `}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              onClick={() => setHoveredIndex(hoveredIndex === index ? null : index)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setHoveredIndex(hoveredIndex === index ? null : index);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-expanded={hoveredIndex === index}
             >
               {/* Background image */}
               <div 

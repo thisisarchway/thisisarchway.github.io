@@ -44,7 +44,10 @@ function App() {
           <Header />
           <Suspense fallback={
             <div className="min-h-screen bg-black flex items-center justify-center">
-              <div className="text-white text-xl">Loading...</div>
+              <div className="flex flex-col items-center gap-4">
+                <div className="w-12 h-12 border-4 border-gray-700 border-t-white rounded-full animate-spin"></div>
+                <div className="text-white text-lg font-light tracking-wide">Loading...</div>
+              </div>
             </div>
           }>
             <Routes>

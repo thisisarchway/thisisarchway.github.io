@@ -52,13 +52,11 @@ const Projects = () => {
                 index === 2 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''
               }`}>
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={`${project.title} - ${project.description}`}
-                    className={`w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105 ${
-                      project.title === "Vital" ? "scale-110" : ""
-                    }`}
-                   loading="lazy"
+                    className="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                   <div className="absolute top-4 left-4 flex gap-2">

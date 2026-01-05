@@ -33,7 +33,7 @@ const Contact = () => {
           </p>
 
           <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-16 md:p-20 relative overflow-hidden aspect-[4/3] flex items-center justify-center">
+            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8 md:p-16 relative overflow-hidden min-h-[300px] md:min-h-[400px] flex items-center justify-center">
               {/* Background Video */}
               {shouldLoadVideo && (
                 <video
@@ -46,14 +46,14 @@ const Contact = () => {
                   <source src="https://i.imgur.com/4iXOjRF.mp4" type="video/mp4" />
                 </video>
               )}
-              
+
               {/* Content */}
               <div className="relative z-10 w-full">
-              <div className="flex justify-center space-x-16">
+              <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16">
                 <div className="text-center">
-                  <p className="text-white text-xl mb-6 font-light tracking-wide">Email us</p>
-                  <a 
-                    href="mailto:contact@thisisarchway.com" 
+                  <p className="text-white text-lg md:text-xl mb-4 md:mb-6 font-light tracking-wide">Email us</p>
+                  <a
+                    href="mailto:contact@thisisarchway.com"
                     className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-16 h-16 flex items-center justify-center mx-auto"
                     title="Email us"
                   >
@@ -61,9 +61,9 @@ const Contact = () => {
                   </a>
                 </div>
                 <div className="text-center">
-                  <p className="text-white text-xl mb-6 font-light tracking-wide">Follow us</p>
-                  <a 
-                    href="https://instagram.com/thisisarchway" 
+                  <p className="text-white text-lg md:text-xl mb-4 md:mb-6 font-light tracking-wide">Follow us</p>
+                  <a
+                    href="https://instagram.com/thisisarchway"
                     className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-16 h-16 flex items-center justify-center mx-auto"
                     title="Follow us on Instagram"
                   >
@@ -71,9 +71,9 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              
-              <div className="mt-8 pt-8 border-t border-gray-700">
-                <p className="text-gray-300 text-xl">
+
+              <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-700">
+                <p className="text-gray-300 text-lg md:text-xl">
                   <MapPin className="w-5 h-5 inline mr-2" />
                   New York City, NY
                 </p>

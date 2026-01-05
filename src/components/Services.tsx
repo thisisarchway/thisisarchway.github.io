@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Film, Handshake, Smartphone, Clapperboard, Trophy, Ticket } from 'lucide-react';
 
 const Services = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const services = [
     {
       icon: <Film className="w-8 h-8" />,
@@ -50,14 +52,33 @@ const Services = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group hover:bg-gray-800/50 hover:scale-102 hover:shadow-lg p-4 md:p-6 rounded-lg transition-all duration-300 border border-gray-700 bg-gray-900/30 relative overflow-hidden min-h-[200px] flex items-center justify-center cursor-pointer">
-              {/* Large title - visible by default, hidden on hover */}
-              <h3 className="text-2xl md:text-3xl font-light text-white text-center group-hover:opacity-0 transition-opacity duration-300 absolute inset-0 flex items-center justify-center tracking-wide px-4 leading-tight">
+            <div
+              key={index}
+              className={`group hover:bg-gray-800/50 hover:scale-102 hover:shadow-lg p-4 md:p-6 rounded-lg transition-all duration-300 border border-gray-700 bg-gray-900/30 relative overflow-hidden min-h-[200px] flex items-center justify-center cursor-pointer ${
+                activeIndex === index ? 'bg-gray-800/50 scale-102' : ''
+              }`}
+              onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setActiveIndex(activeIndex === index ? null : index);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-expanded={activeIndex === index}
+            >
+              {/* Large title - visible by default, hidden on hover/active */}
+              <h3 className={`text-2xl md:text-3xl font-light text-white text-center group-hover:opacity-0 transition-opacity duration-300 absolute inset-0 flex items-center justify-center tracking-wide px-4 leading-tight ${
+                activeIndex === index ? 'opacity-0' : ''
+              }`}>
                 {service.title}
               </h3>
-              
-              {/* Content - hidden by default, visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-center">
+
+              {/* Content - hidden by default, visible on hover/active */}
+              <div className={`opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-center ${
+                activeIndex === index ? 'opacity-100' : ''
+              }`}>
                 <div className="flex justify-center mb-4 text-white">
                   {service.icon}
                 </div>

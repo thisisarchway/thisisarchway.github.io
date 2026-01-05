@@ -49,9 +49,11 @@ const Header = () => {
             <nav aria-label="Main navigation">
               <ul className="space-y-4 md:space-y-6 text-center">
                 <li>
-                  <Link 
-                    to="/" 
-                    className="text-white hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2"
+                  <Link
+                    to="/"
+                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
+                      location.pathname === '/' ? 'text-gray-400 font-medium' : 'text-white'
+                    }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
@@ -60,9 +62,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    to="/about" 
-                    className="text-white hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2"
+                  <Link
+                    to="/about"
+                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
+                      location.pathname === '/about' ? 'text-gray-400 font-medium' : 'text-white'
+                    }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
@@ -71,9 +75,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    to="/projects" 
-                    className="text-white hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2"
+                  <Link
+                    to="/projects"
+                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
+                      location.pathname === '/projects' ? 'text-gray-400 font-medium' : 'text-white'
+                    }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
@@ -82,9 +88,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    to="/collaborators" 
-                    className="text-white hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2"
+                  <Link
+                    to="/collaborators"
+                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
+                      location.pathname === '/collaborators' ? 'text-gray-400 font-medium' : 'text-white'
+                    }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
@@ -93,9 +101,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    to="/investment" 
-                    className="text-white hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2"
+                  <Link
+                    to="/investment"
+                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
+                      location.pathname === '/investment' ? 'text-gray-400 font-medium' : 'text-white'
+                    }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
@@ -104,9 +114,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    to="/contact" 
-                    className="text-white hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2"
+                  <Link
+                    to="/contact"
+                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
+                      location.pathname === '/contact' ? 'text-gray-400 font-medium' : 'text-white'
+                    }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
@@ -115,9 +127,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    to="/shop" 
-                    className="text-white hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2"
+                  <Link
+                    to="/shop"
+                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
+                      location.pathname === '/shop' ? 'text-gray-400 font-medium' : 'text-white'
+                    }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
