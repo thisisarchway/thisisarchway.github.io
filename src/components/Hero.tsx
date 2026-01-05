@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import AnimatedButton from './AnimatedButton';
 
 const Hero = () => {
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
-
-  useEffect(() => {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    const hasReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setShouldLoadVideo(!isMobile && !hasReducedMotion);
-  }, []);
-
   const scrollToNext = () => {
     const introSection = document.getElementById('intro');
     if (introSection) {
@@ -20,27 +12,16 @@ const Hero = () => {
 
   return (
     <>
-      {/* Hero Video Section */}
+      {/* Hero Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center">
-        {shouldLoadVideo ? (
-          <div className="absolute inset-0">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="w-full h-full object-cover"
-              style={{
-                WebkitPlaysinline: 'true'
-              } as React.CSSProperties}
-            >
-              <source src="/hero_vid.mp4" type="video/mp4" />
-            </video>
-          </div>
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
-        )}
+        <div className="absolute inset-0">
+          <img
+            src="/logo.jpg"
+            alt="Archway Productions"
+            className="w-full h-full object-cover opacity-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
+        </div>
 
         {/* Scroll Arrow */}
         <button
