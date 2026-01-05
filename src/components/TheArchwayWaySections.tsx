@@ -38,11 +38,11 @@ const TheArchwayWaySections = () => {
           The Archway Way
         </h2>
         
-        <div className="flex flex-col md:flex-row w-full h-[400px] overflow-hidden rounded-lg">
+        <div className="flex flex-col md:flex-row w-full h-[800px] md:h-[400px] overflow-hidden rounded-lg">
           {principles.map((principle, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out
+              className={`relative overflow-y-auto md:overflow-hidden cursor-pointer transition-all duration-500 ease-in-out
                 ${hoveredIndex === index ? 'flex-[3] md:flex-[5]' : 'flex-1'}
                 ${hoveredIndex !== null && hoveredIndex !== index ? 'opacity-50' : ''}
               `}
@@ -87,15 +87,15 @@ const TheArchwayWaySections = () => {
               </div>
               
               {/* Revealed content - hidden by default, fades in on hover with delay */}
-              <div className={`absolute inset-0 flex items-center justify-center z-10 px-4 text-center
+              <div className={`absolute inset-0 flex items-center justify-center z-10 px-6 md:px-4 py-8 md:py-0 text-center
                 transition-all duration-300 ease-in-out
                 ${hoveredIndex === index ? 'opacity-100 translate-y-0 scale-100 delay-300' : 'opacity-0 translate-y-8 scale-95 delay-0'}
               `}>
-                <div className="w-full">
-                  <h4 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 tracking-wide">
+                <div className="w-full max-w-2xl">
+                  <h4 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 md:mb-4 tracking-wide">
                     {principle.title}
                   </h4>
-                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                  <p className="text-base md:text-base text-gray-300 leading-relaxed">
                     {principle.description}
                   </p>
                 </div>
