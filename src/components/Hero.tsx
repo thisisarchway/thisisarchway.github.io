@@ -7,10 +7,25 @@ const Hero = () => {
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
   React.useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        setVideoError(true);
-      });
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.volume = 0;
+      video.setAttribute('webkit-playsinline', 'true');
+
+      const attemptPlay = () => {
+        video.play().catch((error) => {
+          console.log('Video autoplay failed:', error);
+          setVideoError(true);
+        });
+      };
+
+      if (video.readyState >= 3) {
+        attemptPlay();
+      } else {
+        video.addEventListener('loadedmetadata', attemptPlay, { once: true });
+        video.addEventListener('canplay', attemptPlay, { once: true });
+      }
     }
   }, []);
 
@@ -34,9 +49,10 @@ const Hero = () => {
               muted
               playsInline
               poster="/hero_still.jpg"
-              preload="metadata"
+              preload="auto"
               className="w-full h-full object-cover"
               onError={() => setVideoError(true)}
+              style={{ WebkitTransform: 'translateZ(0)' }}
             >
               <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&raw=1" type="video/mp4" />
             </video>
