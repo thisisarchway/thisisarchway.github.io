@@ -56,6 +56,8 @@ const Projects = () => {
                     src={project.image}
                     alt={`${project.title} - ${project.description}`}
                     className="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    width="800"
+                    height="600"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />

@@ -15,12 +15,17 @@ const NewsletterForm = () => {
         method="post"
         className="flex flex-col sm:flex-row gap-4 max-w-sm mx-auto"
       >
-        <input 
-          type="email" 
+        <label htmlFor="newsletter-email" className="sr-only">
+          Email address
+        </label>
+        <input
+          id="newsletter-email"
+          type="email"
           name="email"
           placeholder="Enter your email"
           className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
           required
+          aria-label="Email address for newsletter subscription"
         />
         <input type="hidden" name="first_url" value="https://thisisarchway.com" />
         <input type="hidden" name="first_referrer" value="" />

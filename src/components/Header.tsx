@@ -38,6 +38,8 @@ const Header = () => {
                 src="/logo.jpg"
                 alt="Archway Productions Logo"
                 className="w-32 h-auto"
+                width="128"
+                height="128"
                 loading="lazy"
               />
             </Link>
