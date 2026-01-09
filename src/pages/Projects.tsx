@@ -72,6 +72,7 @@ const Projects = () => {
                     width="800"
                     height="600"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                   <div className="absolute top-4 left-4 flex gap-2">

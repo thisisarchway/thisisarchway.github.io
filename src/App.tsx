@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import ErrorBoundary from './components/ErrorBoundary';
 import StructuredData from './components/StructuredData';
+import { Analytics } from './components/Analytics';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -39,6 +40,7 @@ function App() {
           <meta property="og:url" content="https://thisisarchway.com" />
         </Helmet>
         <StructuredData />
+        <Analytics />
         <div className="min-h-screen bg-black">
           <ScrollToTop />
           <Header />
