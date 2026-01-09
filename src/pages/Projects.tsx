@@ -62,7 +62,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <AnimatedSection key={index} animation="fade-up" delay={index * 150}>
                 <div className={`group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/70 hover:border-gray-500 hover:shadow-2xl transition-all duration-500 ${
-                  index === 2 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''
+                  index === 2 ? 'md:col-span-2 md:max-w-2xl md:mx-auto' : ''
                 }`}>
                 <div className="relative overflow-hidden">
                   <img
