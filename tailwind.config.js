@@ -12,6 +12,9 @@ export default {
         'normal': '400',
         'medium': '500',
         'semibold': '600',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
       }
     },
   },

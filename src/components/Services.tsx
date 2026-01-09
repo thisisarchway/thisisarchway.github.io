@@ -54,8 +54,8 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group hover:bg-white/5 p-8 md:p-12 transition-all duration-500 bg-black relative overflow-hidden min-h-[320px] flex items-center justify-center cursor-pointer ${
-                activeIndex === index ? 'bg-white/5' : ''
+              className={`group hover:bg-white/5 p-8 md:p-12 transition-all duration-700 bg-black relative overflow-hidden min-h-[320px] flex items-center justify-center cursor-pointer hover:scale-[1.02] hover:shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)] ${
+                activeIndex === index ? 'bg-white/5 scale-[1.02] shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)]' : ''
               }`}
               onClick={() => setActiveIndex(activeIndex === index ? null : index)}
               onKeyDown={(e) => {
@@ -68,24 +68,34 @@ const Services = () => {
               tabIndex={0}
               aria-expanded={activeIndex === index}
             >
+              {/* Atmospheric radial gradient glow - appears on hover */}
+              <div className={`absolute inset-0 bg-gradient-radial from-white/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${
+                activeIndex === index ? 'opacity-100' : ''
+              }`} />
+
+              {/* Subtle backdrop blur overlay */}
+              <div className={`absolute inset-0 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${
+                activeIndex === index ? 'opacity-100' : ''
+              }`} />
+
               {/* Large title - visible by default, hidden on hover/active */}
-              <h3 className={`text-2xl md:text-3xl font-light text-white text-center group-hover:opacity-0 transition-opacity duration-500 absolute inset-0 flex items-center justify-center tracking-tight px-6 leading-tight ${
+              <h3 className={`text-2xl md:text-3xl font-light text-white text-center group-hover:opacity-0 transition-opacity duration-700 absolute inset-0 flex items-center justify-center tracking-tight px-6 leading-tight ${
                 activeIndex === index ? 'opacity-0' : ''
               }`}>
                 {service.title}
               </h3>
 
               {/* Content - hidden by default, visible on hover/active */}
-              <div className={`opacity-0 group-hover:opacity-100 transition-opacity duration-500 w-full text-center ${
+              <div className={`opacity-0 group-hover:opacity-100 transition-opacity duration-700 w-full text-center relative z-10 ${
                 activeIndex === index ? 'opacity-100' : ''
               }`}>
-                <div className="flex justify-center mb-6 text-white/80">
+                <div className="flex justify-center mb-6 text-white/80 group-hover:text-white transition-colors duration-700">
                   {service.icon}
                 </div>
-                <h4 className="text-xl md:text-2xl font-light text-white mb-5 tracking-tight">
+                <h4 className="text-xl md:text-2xl font-light text-white mb-5 tracking-tight group-hover:brightness-110 transition-all duration-700">
                   {service.title}
                 </h4>
-                <p className="text-base text-gray-400 leading-relaxed">
+                <p className="text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
                   {service.description}
                 </p>
               </div>
