@@ -57,21 +57,21 @@ const Hero = () => {
       </section>
 
       {/* Intro Section */}
-      <section id="intro" className="py-12 md:py-20 px-4 md:px-8 bg-black text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-4 md:mb-6 leading-tight tracking-wide">
-            At <span className="font-normal">Archway Productions</span>,
+      <section id="intro" className="py-16 md:py-24 px-4 md:px-8 bg-black text-center">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-6 md:mb-8 leading-tight tracking-wide">
+            At <span className="font-medium">Archway Productions</span>,
           </h2>
-          <p className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 md:mb-8 leading-tight tracking-wide">
+          <p className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8 md:mb-10 leading-tight tracking-wide">
             The Future Is Not Franchised.
           </p>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed px-4">
-            We're retiring the reboots and making room for quality, original projects.
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed px-4 font-light">
+            Retiring the reboots. Making room for originality.
           </p>
-          
-          <div className="mt-8 md:mt-12">
+
+          <div className="mt-10 md:mt-14">
             <AnimatedButton to="/about">
-              About Archway
+              Discover Archway
             </AnimatedButton>
           </div>
         </div>

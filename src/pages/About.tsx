@@ -39,9 +39,8 @@ const About = () => {
 
           <div className="space-y-8 text-gray-300">
             <AnimatedSection animation="fade-up" delay={100}>
-              <p className="text-lg md:text-xl leading-relaxed">
-                Founded in 2024 by young entertainment industry professionals who grew up with VHS but came of age online, Archway Productions is a project incubator and production company
-                redefining how stories get made, from concept to screen.
+              <p className="text-xl md:text-2xl leading-relaxed font-light">
+                Founded in 2024 by entertainment industry professionals who grew up with VHS but came of age online, Archway Productions is a project incubator and production company redefining how stories get made—from concept to screen.
               </p>
             </AnimatedSection>
 

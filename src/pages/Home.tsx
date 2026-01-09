@@ -33,32 +33,30 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Investment Box */}
               <AnimatedSection animation="slide-right" delay={100}>
-                <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8 text-center group relative overflow-hidden transition-all duration-300 hover:bg-gray-800/50">
-                  <h3 className="text-2xl font-medium text-white mb-4">
+                <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-10 text-center group relative overflow-hidden transition-all duration-500 hover:bg-gray-800/70 hover:border-gray-500 hover:shadow-2xl">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-5 tracking-wide">
                     Ready to Fund the Future?
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    We're seeking strategic partners who share our vision for original, culturally relevant storytelling.
-                    Let's discuss how you can be part of the Archway story.
+                  <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed">
+                    We're seeking strategic partners who share our vision for original, culturally relevant storytelling. Join us in shaping the next generation of entertainment.
                   </p>
                   <AnimatedButton to="/investment">
-                    Get Investment Details
+                    Explore Investment Opportunities
                   </AnimatedButton>
                 </div>
               </AnimatedSection>
 
               {/* Creative Cohort Box */}
               <AnimatedSection animation="slide-left" delay={200}>
-                <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8 text-center group relative overflow-hidden transition-all duration-300 hover:bg-gray-800/50">
-                  <h3 className="text-2xl font-medium text-white mb-4">
+                <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-10 text-center group relative overflow-hidden transition-all duration-500 hover:bg-gray-800/70 hover:border-gray-500 hover:shadow-2xl">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-5 tracking-wide">
                     Ready to Share Your Story?
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    Join our collective of visionary filmmakers, writers, and creators.
-                    We're building a community that authentically champions the new wave of bold storytelling.
+                  <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed">
+                    Join our collective of visionary filmmakers, writers, and creators. We're building a community that champions the new wave of bold, authentic storytelling.
                   </p>
                   <AnimatedButton to="/collaborators">
-                    Creative Cohort Information
+                    Join the Creative Collective
                   </AnimatedButton>
                 </div>
               </AnimatedSection>

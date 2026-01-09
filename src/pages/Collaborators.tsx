@@ -94,8 +94,8 @@ const Collaborators = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
-              If you create work that surprises, resonates, or challenges, we want to collaborate.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto text-center mb-20 leading-relaxed font-light">
+              If your work surprises, resonates, or challenges convention, we want to collaborate.
             </p>
           </AnimatedSection>
 
@@ -306,12 +306,12 @@ const Collaborators = () => {
 
           {/* Call to Action */}
           <AnimatedSection animation="scale" delay={500}>
-            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8 text-center">
-              <h2 className="text-2xl font-medium text-white mb-4">
-                The Story Starts Here
+            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-12 text-center hover:bg-gray-800/50 hover:border-gray-500 transition-all duration-500">
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-wide">
+                Your Story Starts Here
               </h2>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
-                We're here for stories that defy expectations and leave a mark. If that's yours, submit your project for consideration.
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                We champion stories that defy expectations and leave their mark. If that sounds like yours, let's talk.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <AnimatedButton href="mailto:contact@thisisarchway.com">

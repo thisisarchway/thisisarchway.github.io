@@ -26,7 +26,7 @@ const Projects = () => {
       title: "The Untitled Aubrey Plaza Devil Project",
       category: "Feature",
       status: "In Development",
-      description: "Down on her luck, Amalea Jane moved to Los Angeles to make it big in show-business. To her dismay, this sh*t is way harder than it looks, folks. At the edge of her sanity -and frankly on accident- she prays to the Devil who reveals itself in the form of her celebrity idol and crush: Aubrey Plaza. What follows is a ridiculous romp of friendship, fame and the glory of getting cancelled.",
+      description: "Down on her luck, Amalea Jane moved to Los Angeles to make it big in show business. To her dismay, breaking in is way harder than it looks. At the edge of her sanity—and frankly on accident—she prays to the Devil, who reveals itself in the form of her celebrity idol and crush: Aubrey Plaza. What follows is a ridiculous romp of friendship, fame, and the glory of getting cancelled.",
       image: "https://i.imgur.com/7KE1aQF.jpeg",
       credit: "Story By: Ray Deutsch"
     }
@@ -58,23 +58,23 @@ const Projects = () => {
             </h1>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <AnimatedSection key={index} animation="fade-up" delay={index * 150}>
-                <div className={`group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/50 hover:scale-102 hover:shadow-lg transition-all duration-300 ${
+                <div className={`group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/70 hover:border-gray-500 hover:shadow-2xl transition-all duration-500 ${
                   index === 2 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''
                 }`}>
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={`${project.title} - ${project.description}`}
-                    className="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-80 object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
                     width="800"
                     height="600"
                     loading="lazy"
                     decoding="async"
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-500" />
                   <div className="absolute top-4 left-4 flex gap-2">
                     <span className="bg-white/90 text-black px-3 py-1 text-xs font-medium rounded-full">
                       {project.category}
@@ -84,14 +84,14 @@ const Projects = () => {
                     </span>
                   </div>
                 </div>
-                <div className="p-8 text-center">
-                  <h2 className="text-3xl font-medium text-white mb-4 group-hover:text-gray-300 transition-colors">
+                <div className="p-10 text-center">
+                  <h2 className="text-3xl font-medium text-white mb-5 group-hover:text-gray-200 transition-colors duration-300">
                     {project.title}
                   </h2>
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-base text-gray-300 leading-relaxed mb-4">
                     {project.description}
                   </p>
-                  <p className="text-sm text-gray-400 mt-3 italic">
+                  <p className="text-sm text-gray-500 italic">
                     {project.credit}
                   </p>
                 </div>

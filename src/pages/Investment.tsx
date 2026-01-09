@@ -75,8 +75,8 @@ const Investment = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
-              Archway Productions is where creativity meets strategy. We partner with investors to fund a curated slate of original projects designed for cultural impact, strong market appeal, and long-term growth.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto text-center mb-20 leading-relaxed font-light">
+              Where creativity meets strategy. We partner with investors to fund a curated slate of original projects designed for cultural impact, market appeal, and sustainable growth.
             </p>
           </AnimatedSection>
 
@@ -103,11 +103,11 @@ const Investment = () => {
 
           {/* Bold Statement */}
           <AnimatedSection animation="scale" delay={200}>
-            <div className="text-center mb-16">
-              <p className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-wide">
+            <div className="text-center mb-20 py-12">
+              <p className="text-4xl md:text-6xl font-light text-white leading-tight tracking-wide mb-4">
                 Not taking risks is a risk.
               </p>
-              <p className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-wide mt-2">
+              <p className="text-4xl md:text-6xl font-medium text-white leading-tight tracking-wide">
                 Archway is the path forward.
               </p>
             </div>
@@ -146,15 +146,15 @@ const Investment = () => {
           </AnimatedSection>
 
           <AnimatedSection animation="scale" delay={400}>
-            <div className="bg-gray-900/50 p-8 text-center border border-gray-700 rounded-lg">
-              <h3 className="text-2xl font-medium text-white mb-4">
-                Let's Build the Future of Storytelling Together.
+            <div className="bg-gray-900/50 p-12 text-center border border-gray-700 rounded-lg hover:bg-gray-800/50 hover:border-gray-500 transition-all duration-500">
+              <h3 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-wide">
+                Let's Build the Future of Storytelling
               </h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
-                We're in active development on our first slate and are now aligning with capital partners who see the generational shift in entertainment as their greatest opportunity.
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                We're in active development on our first slate and aligning with capital partners who recognize the generational shift in entertainment as the opportunity of a lifetime.
               </p>
               <AnimatedButton href="mailto:contact@thisisarchway.com">
-                Send an Introduction
+                Start the Conversation
               </AnimatedButton>
             </div>
           </AnimatedSection>
