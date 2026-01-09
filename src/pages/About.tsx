@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import TheArchwayWaySections from '../components/TheArchwayWaySections';
 import HoverRevealCard from '../components/HoverRevealCard';
 import Layout from '../components/Layout';
+import { AnimatedSection } from '../components/AnimatedSection';
+import { StructuredDataAbout } from '../components/StructuredDataAbout';
 
 const About = () => {
   useEffect(() => {
@@ -18,25 +20,37 @@ const About = () => {
         <link rel="canonical" href="https://thisisarchway.com/about" />
         <meta property="og:title" content="About Archway Productions - Gen Z Media Company" />
         <meta property="og:description" content="Founded in 2024 by young entertainment industry professionals, Archway Productions is redefining how stories get made, from concept to screen." />
+        <meta property="og:image" content="https://thisisarchway.com/logo.jpg" />
+        <meta property="og:url" content="https://thisisarchway.com/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Archway Productions - Gen Z Media Company" />
+        <meta name="twitter:description" content="Founded in 2024 by young entertainment industry professionals, Archway Productions is redefining how stories get made, from concept to screen." />
+        <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
+      <StructuredDataAbout />
       <div className="pt-20 pb-12 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
-            About Archway
-          </h1>
-          
+          <AnimatedSection animation="fade-in">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
+              About Archway
+            </h1>
+          </AnimatedSection>
+
           <div className="space-y-8 text-gray-300">
-            <p className="text-lg md:text-xl leading-relaxed">
-              Founded in 2024 by young entertainment industry professionals who grew up with VHS but came of age online, Archway Productions is a project incubator and production company 
-              redefining how stories get made, from concept to screen.
-            </p>
-            
-            
+            <AnimatedSection animation="fade-up" delay={100}>
+              <p className="text-lg md:text-xl leading-relaxed">
+                Founded in 2024 by young entertainment industry professionals who grew up with VHS but came of age online, Archway Productions is a project incubator and production company
+                redefining how stories get made, from concept to screen.
+              </p>
+            </AnimatedSection>
+
             <div className="space-y-12 mt-12">
-              <HoverRevealCard
-                title="The Problem"
-                backgroundImage="https://i.imgur.com/anivm9t.jpeg"
-              >
+              <AnimatedSection animation="fade-up" delay={200}>
+                <HoverRevealCard
+                  title="The Problem"
+                  backgroundImage="https://i.imgur.com/anivm9t.jpeg"
+                >
                 <p className="text-lg font-bold text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   Gen Z runs culture, but Hollywood still won't hand over the keys.
                 </p>
@@ -55,11 +69,13 @@ const About = () => {
                   </li>
                 </ul>
               </HoverRevealCard>
+              </AnimatedSection>
 
-              <HoverRevealCard
-                title="The Landscape"
-                backgroundImage="https://i.imgur.com/zsLoXjc.jpeg"
-              >
+              <AnimatedSection animation="fade-up" delay={300}>
+                <HoverRevealCard
+                  title="The Landscape"
+                  backgroundImage="https://i.imgur.com/zsLoXjc.jpeg"
+                >
                 <p className="text-lg font-bold text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   Millions of likes, followers, and shares. Zero power.
                 </p>
@@ -78,11 +94,13 @@ const About = () => {
                   </li>
                 </ul>
               </HoverRevealCard>
+              </AnimatedSection>
 
-              <HoverRevealCard
-                title="The Solution"
-                backgroundImage="https://i.imgur.com/xiAkqKh.jpeg"
-              >
+              <AnimatedSection animation="fade-up" delay={400}>
+                <HoverRevealCard
+                  title="The Solution"
+                  backgroundImage="https://i.imgur.com/xiAkqKh.jpeg"
+                >
                 <p className="text-lg font-bold text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   Archway is a new kind of media company — by us, for all.
                 </p>
@@ -101,6 +119,7 @@ const About = () => {
                   </li>
                 </ul>
               </HoverRevealCard>
+              </AnimatedSection>
             </div>
           </div>
         </div>

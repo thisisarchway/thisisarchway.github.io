@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Instagram, MapPin } from 'lucide-react';
 import Layout from '../components/Layout';
+import { AnimatedSection } from '../components/AnimatedSection';
 
 const Contact = () => {
   const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
@@ -21,18 +22,30 @@ const Contact = () => {
         <link rel="canonical" href="https://thisisarchway.com/contact" />
         <meta property="og:title" content="Contact Archway Productions" />
         <meta property="og:description" content="Get in touch with Archway Productions. Whether you're a creator, investor, or collaborator, we'd love to hear from you." />
+        <meta property="og:image" content="https://thisisarchway.com/logo.jpg" />
+        <meta property="og:url" content="https://thisisarchway.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Archway Productions" />
+        <meta name="twitter:description" content="Get in touch with Archway Productions. Whether you're a creator, investor, or collaborator, we'd love to hear from you." />
+        <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
       <div className="pt-20 pb-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
-            Get In Touch
-          </h1>
+          <AnimatedSection animation="fade-in">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
+              Get In Touch
+            </h1>
+          </AnimatedSection>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
-            Whether you're a creator, investor, or collaborator, we'd love to hear from you.
-          </p>
+          <AnimatedSection animation="fade-up" delay={100}>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
+              Whether you're a creator, investor, or collaborator, we'd love to hear from you.
+            </p>
+          </AnimatedSection>
 
-          <div className="max-w-2xl mx-auto text-center">
+          <AnimatedSection animation="scale" delay={200}>
+            <div className="max-w-2xl mx-auto text-center">
             <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8 md:p-16 relative overflow-hidden min-h-[300px] md:min-h-[400px] flex items-center justify-center">
               {/* Background Video */}
               {shouldLoadVideo && (
@@ -80,7 +93,8 @@ const Contact = () => {
               </div>
               </div>
             </div>
-          </div>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
       </div>

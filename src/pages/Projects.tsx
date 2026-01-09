@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout';
+import { AnimatedSection } from '../components/AnimatedSection';
+import { StructuredDataProjects } from '../components/StructuredDataProjects';
 
 const Projects = () => {
   const projects = [
@@ -39,18 +41,29 @@ const Projects = () => {
         <link rel="canonical" href="https://thisisarchway.com/projects" />
         <meta property="og:title" content="Projects - Archway Productions" />
         <meta property="og:description" content="Explore Archway Productions' current projects including Vital and Leaping - original stories for the digital generation." />
+        <meta property="og:image" content="https://thisisarchway.com/vital-project.jpeg" />
+        <meta property="og:url" content="https://thisisarchway.com/projects" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Projects - Archway Productions" />
+        <meta name="twitter:description" content="Explore Archway Productions' current projects including Vital and Leaping - original stories for the digital generation." />
+        <meta name="twitter:image" content="https://thisisarchway.com/vital-project.jpeg" />
       </Helmet>
+      <StructuredDataProjects />
       <div className="pt-20 pb-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-12 text-center tracking-wide">
-            Projects
-          </h1>
-          
+          <AnimatedSection animation="fade-in">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-12 text-center tracking-wide">
+              Projects
+            </h1>
+          </AnimatedSection>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
-              <div key={index} className={`group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/50 hover:scale-102 hover:shadow-lg transition-all duration-300 ${
-                index === 2 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''
-              }`}>
+              <AnimatedSection key={index} animation="fade-up" delay={index * 150}>
+                <div className={`group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/50 hover:scale-102 hover:shadow-lg transition-all duration-300 ${
+                  index === 2 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''
+                }`}>
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -81,7 +94,8 @@ const Projects = () => {
                     {project.credit}
                   </p>
                 </div>
-              </div>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
