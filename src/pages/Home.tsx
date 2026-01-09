@@ -28,35 +28,35 @@ const Home = () => {
         <Hero />
         <TheArchwayWaySections />
         <Services />
-        <section className="py-12 md:py-20 px-4 md:px-8 bg-black">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="py-24 md:py-32 px-4 md:px-8 bg-black">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
               {/* Investment Box */}
               <AnimatedSection animation="slide-right" delay={100}>
-                <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-10 text-center group relative overflow-hidden transition-all duration-500 hover:bg-gray-800/70 hover:border-gray-500 hover:shadow-2xl">
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-5 tracking-wide">
+                <div className="border-t border-white/10 pt-12 group relative overflow-hidden transition-all duration-500">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8 tracking-tight leading-tight">
                     Ready to Fund the Future?
                   </h3>
-                  <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
                     We're seeking strategic partners who share our vision for original, culturally relevant storytelling. Join us in shaping the next generation of entertainment.
                   </p>
                   <AnimatedButton to="/investment">
-                    Explore Investment Opportunities
+                    Explore Investment
                   </AnimatedButton>
                 </div>
               </AnimatedSection>
 
               {/* Creative Cohort Box */}
               <AnimatedSection animation="slide-left" delay={200}>
-                <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-10 text-center group relative overflow-hidden transition-all duration-500 hover:bg-gray-800/70 hover:border-gray-500 hover:shadow-2xl">
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-5 tracking-wide">
+                <div className="border-t border-white/10 pt-12 group relative overflow-hidden transition-all duration-500">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8 tracking-tight leading-tight">
                     Ready to Share Your Story?
                   </h3>
-                  <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
                     Join our collective of visionary filmmakers, writers, and creators. We're building a community that champions the new wave of bold, authentic storytelling.
                   </p>
                   <AnimatedButton to="/collaborators">
-                    Join the Creative Collective
+                    Join the Collective
                   </AnimatedButton>
                 </div>
               </AnimatedSection>

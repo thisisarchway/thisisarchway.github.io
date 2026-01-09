@@ -29,17 +29,17 @@ const About = () => {
         <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
       <StructuredDataAbout />
-      <div className="pt-20 pb-12 px-4 md:px-8">
-        <div className="max-w-4xl mx-auto">
+      <div className="pt-32 pb-24 px-4 md:px-8">
+        <div className="max-w-5xl mx-auto">
           <AnimatedSection animation="fade-in">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-24 text-center tracking-tight">
               About Archway
             </h1>
           </AnimatedSection>
 
-          <div className="space-y-8 text-gray-300">
+          <div className="space-y-12 text-gray-300">
             <AnimatedSection animation="fade-up" delay={100}>
-              <p className="text-xl md:text-2xl leading-relaxed font-light">
+              <p className="text-2xl md:text-3xl leading-relaxed font-light text-gray-400">
                 Founded in 2024 by entertainment industry professionals who grew up with VHS but came of age online, Archway Productions is a project incubator and production company redefining how stories get made—from concept to screen.
               </p>
             </AnimatedSection>

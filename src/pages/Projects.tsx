@@ -50,51 +50,49 @@ const Projects = () => {
         <meta name="twitter:image" content="https://thisisarchway.com/vital-project.jpeg" />
       </Helmet>
       <StructuredDataProjects />
-      <div className="pt-20 pb-12 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
+      <div className="pt-32 pb-24 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-12 text-center tracking-wide">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-24 text-center tracking-tight">
               Projects
             </h1>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+          <div className="space-y-32">
             {projects.map((project, index) => (
-              <AnimatedSection key={index} animation="fade-up" delay={index * 150}>
-                <div className={`group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/70 hover:border-gray-500 hover:shadow-2xl transition-all duration-500 ${
-                  index === 2 ? 'md:col-span-2 md:max-w-2xl md:mx-auto' : ''
-                }`}>
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={`${project.title} - ${project.description}`}
-                    className="w-full h-80 object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
-                    width="800"
-                    height="600"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-500" />
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="bg-white/90 text-black px-3 py-1 text-xs font-medium rounded-full">
-                      {project.category}
-                    </span>
-                    <span className="bg-gray-800/90 text-white px-3 py-1 text-xs font-medium rounded-full">
-                      {project.status}
-                    </span>
+              <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
+                <div className="group max-w-5xl mx-auto">
+                  <div className="relative overflow-hidden bg-black">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} - ${project.description}`}
+                      className="w-full h-[500px] md:h-[600px] object-cover object-center transition-all duration-700 ease-out group-hover:scale-105 group-hover:opacity-90"
+                      width="1200"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
+                    <div className="absolute top-6 left-6 flex gap-3">
+                      <span className="bg-white text-black px-4 py-1.5 text-xs font-semibold tracking-widest uppercase">
+                        {project.category}
+                      </span>
+                      <span className="bg-black/60 backdrop-blur-sm border border-white/20 text-white px-4 py-1.5 text-xs font-medium tracking-widest uppercase">
+                        {project.status}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div className="p-10 text-center">
-                  <h2 className="text-3xl font-medium text-white mb-5 group-hover:text-gray-200 transition-colors duration-300">
-                    {project.title}
-                  </h2>
-                  <p className="text-base text-gray-300 leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-                  <p className="text-sm text-gray-500 italic">
-                    {project.credit}
-                  </p>
-                </div>
+                  <div className="mt-12 px-4 md:px-8">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8 tracking-tight group-hover:text-gray-300 transition-colors duration-300">
+                      {project.title}
+                    </h2>
+                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6 max-w-3xl">
+                      {project.description}
+                    </p>
+                    <p className="text-sm text-gray-600 tracking-wide">
+                      {project.credit}
+                    </p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
