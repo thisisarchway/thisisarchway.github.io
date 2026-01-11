@@ -32,9 +32,9 @@ const TheArchwayWaySections = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-8 bg-black">
+    <section className="py-24 md:py-32 px-4 md:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-12 md:mb-16 text-center tracking-wide">
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-16 md:mb-20 text-center tracking-tight">
           The Archway Way
         </h2>
         

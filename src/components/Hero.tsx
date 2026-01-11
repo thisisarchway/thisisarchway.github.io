@@ -57,20 +57,20 @@ const Hero = () => {
       </section>
 
       {/* Intro Section */}
-      <section id="intro" className="py-24 md:py-32 lg:py-40 px-4 md:px-8 bg-black text-center">
+      <section id="intro" className="py-24 md:py-32 px-4 md:px-8 bg-black text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-8 md:mb-12 leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 md:mb-8 leading-tight tracking-tight">
             At <span className="font-normal">Archway Productions</span>,
           </h2>
-          <p className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-12 md:mb-16 leading-tight tracking-tight">
+          <p className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-10 md:mb-12 leading-tight tracking-tight">
             The Future Is Not Franchised.
           </p>
-          <div className="h-px w-24 bg-white/20 mx-auto mb-12 md:mb-16"></div>
+          <div className="h-px w-24 bg-white/20 mx-auto mb-10 md:mb-12"></div>
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-400 leading-relaxed px-4 font-light max-w-4xl mx-auto">
             Retiring the reboots. Making room for originality.
           </p>
 
-          <div className="mt-16 md:mt-20">
+          <div className="mt-12 md:mt-16">
             <AnimatedButton to="/about">
               Discover Archway
             </AnimatedButton>
