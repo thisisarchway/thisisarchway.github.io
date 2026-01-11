@@ -56,7 +56,7 @@ const About = () => {
                 <ul className="space-y-3 text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    Studios want us back in theaters, but will not let us in the rooms where decisions are made.
+                    Studios want our attention, but will not let us in the rooms where decisions are made.
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
