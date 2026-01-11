@@ -105,7 +105,7 @@ const Shop = () => {
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-12 md:p-16 mb-12">
                   <ShoppingBag className="w-16 h-16 text-gray-400 mx-auto mb-6" />
                   <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-8 tracking-tight">
-                    Something Special Is Coming
+                    Coming Soon
                   </h2>
                   <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                     We're curating a collection of exclusive Archway merchandise and limited-edition items
