@@ -50,7 +50,7 @@ const About = () => {
                   title="The Problem"
                   backgroundImage="https://i.imgur.com/anivm9t.jpeg"
                 >
-                <p className="text-lg font-bold text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                <p className="text-lg font-normal text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   Gen Z runs culture, but Hollywood still won't hand over the keys.
                 </p>
                 <ul className="space-y-3 text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
@@ -75,7 +75,7 @@ const About = () => {
                   title="The Landscape"
                   backgroundImage="https://i.imgur.com/zsLoXjc.jpeg"
                 >
-                <p className="text-lg font-bold text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                <p className="text-lg font-normal text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   Millions of likes, followers, and shares. Zero power.
                 </p>
                 <ul className="space-y-3 text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
@@ -100,7 +100,7 @@ const About = () => {
                   title="The Solution"
                   backgroundImage="https://i.imgur.com/xiAkqKh.jpeg"
                 >
-                <p className="text-lg font-bold text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                <p className="text-lg font-normal text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   Archway is a new kind of media company — by us, for all.
                 </p>
                 <ul className="space-y-3 text-gray-300 group-hover:text-gray-200 transition-colors duration-300">

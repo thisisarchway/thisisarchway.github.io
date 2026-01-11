@@ -66,10 +66,10 @@ const Investment = () => {
         <meta name="twitter:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
         <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
-      <div className="pt-20 pb-12 px-4 md:px-8">
+      <div className="py-24 md:py-32 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection animation="fade-in">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-8 text-center tracking-tight">
               Investment Opportunity
             </h1>
           </AnimatedSection>
@@ -104,11 +104,11 @@ const Investment = () => {
           {/* Bold Statement */}
           <AnimatedSection animation="scale" delay={200}>
             <div className="text-center mb-20 py-12">
-              <p className="text-4xl md:text-6xl font-light text-white leading-tight tracking-wide mb-4">
+              <p className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight mb-4">
                 Not taking risks is a risk.
               </p>
-              <p className="text-4xl md:text-6xl font-medium text-white leading-tight tracking-wide">
-                Archway is the path forward.
+              <p className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight">
+                <span className="font-normal">Archway</span> is the path forward.
               </p>
             </div>
           </AnimatedSection>
@@ -123,7 +123,7 @@ const Investment = () => {
                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors duration-300"
                   >
-                    <h3 className="text-lg md:text-xl font-medium text-white">
+                    <h3 className="text-lg md:text-xl font-light text-white">
                       {item.question}
                     </h3>
                     <ChevronDown 
@@ -147,7 +147,7 @@ const Investment = () => {
 
           <AnimatedSection animation="scale" delay={400}>
             <div className="bg-gray-900/50 p-12 text-center border border-gray-700 rounded-lg hover:bg-gray-800/50 hover:border-gray-500 transition-all duration-500">
-              <h3 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-wide">
+              <h3 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-tight">
                 Let's Build the Future of Storytelling
               </h3>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">

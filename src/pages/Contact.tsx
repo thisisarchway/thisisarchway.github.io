@@ -30,10 +30,10 @@ const Contact = () => {
         <meta name="twitter:description" content="Get in touch with Archway Productions. Whether you're a creator, investor, or collaborator, we'd love to hear from you." />
         <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
-      <div className="pt-20 pb-12 px-4 md:px-8">
+      <div className="py-24 md:py-32 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection animation="fade-in">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-8 text-center tracking-tight">
               Get In Touch
             </h1>
           </AnimatedSection>
@@ -64,7 +64,7 @@ const Contact = () => {
               <div className="relative z-10 w-full">
               <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16">
                 <div className="text-center">
-                  <p className="text-white text-lg md:text-xl mb-4 md:mb-6 font-light tracking-wide">Email us</p>
+                  <p className="text-white text-lg md:text-xl mb-4 md:mb-6 font-light tracking-tight">Email us</p>
                   <a
                     href="mailto:contact@thisisarchway.com"
                     className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-16 h-16 flex items-center justify-center mx-auto"
@@ -74,7 +74,7 @@ const Contact = () => {
                   </a>
                 </div>
                 <div className="text-center">
-                  <p className="text-white text-lg md:text-xl mb-4 md:mb-6 font-light tracking-wide">Follow us</p>
+                  <p className="text-white text-lg md:text-xl mb-4 md:mb-6 font-light tracking-tight">Follow us</p>
                   <a
                     href="https://instagram.com/thisisarchway"
                     className="text-white hover:text-gray-300 hover:scale-110 transition-all duration-300 rounded-full hover:bg-gray-800 w-16 h-16 flex items-center justify-center mx-auto"

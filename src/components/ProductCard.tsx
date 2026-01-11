@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   onAddToCart,
 }) => {
   return (
-    <div className="group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/50 hover:scale-102 hover:shadow-xl transition-all duration-300">
+    <div className="group bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden hover:bg-gray-800/50 hover:scale-[1.02] hover:shadow-xl transition-all duration-700">
       <div className="relative overflow-hidden aspect-square">
         <img
           src={imageUrl}
@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
       <div className="p-6">
         <div className="flex items-start justify-between mb-2">
-          <h3 className="text-xl font-medium text-white group-hover:text-gray-100 transition-colors">
+          <h3 className="text-xl font-light text-white group-hover:text-gray-100 transition-colors">
             {name}
           </h3>
           <span className="text-sm text-gray-400 uppercase tracking-wide">
@@ -65,7 +65,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             aria-label={`Add ${name} to cart`}
           >
             <ShoppingCart className="w-4 h-4" />
-            <span className="text-sm font-medium">Add to Cart</span>
+            <span className="text-sm font-light">Add to Cart</span>
           </button>
         </div>
       </div>

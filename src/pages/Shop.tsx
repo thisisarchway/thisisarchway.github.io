@@ -72,10 +72,10 @@ const Shop = () => {
           </video>
         )}
 
-        <div className="pt-20 pb-12 px-4 md:px-8">
+        <div className="py-24 md:py-32 px-4 md:px-8">
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-12">
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-4 tracking-wide">
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-4 tracking-tight">
                 Archway Shop
               </h1>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
@@ -87,7 +87,7 @@ const Shop = () => {
               <div className="flex items-center justify-center py-20">
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-12 h-12 border-4 border-gray-700 border-t-white rounded-full animate-spin"></div>
-                  <div className="text-white text-lg font-light tracking-wide">Loading products...</div>
+                  <div className="text-white text-lg font-light tracking-tight">Loading products...</div>
                 </div>
               </div>
             )}
@@ -104,7 +104,7 @@ const Shop = () => {
               <div className="max-w-2xl mx-auto text-center">
                 <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-12 md:p-16 mb-12">
                   <ShoppingBag className="w-16 h-16 text-gray-400 mx-auto mb-6" />
-                  <h2 className="text-3xl md:text-4xl font-light text-white mb-8 tracking-wide">
+                  <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-8 tracking-tight">
                     Something Special Is Coming
                   </h2>
                   <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -158,7 +158,7 @@ const Shop = () => {
                     <div className="flex justify-center mb-6">
                       <Instagram className="w-12 h-12 text-white" />
                     </div>
-                    <h3 className="text-2xl font-medium text-white mb-4 tracking-wide">
+                    <h3 className="text-2xl md:text-3xl font-light text-white mb-4 tracking-tight">
                       Stay Connected
                     </h3>
                     <p className="text-gray-300 mb-8 leading-relaxed">
