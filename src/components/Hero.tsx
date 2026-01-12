@@ -78,10 +78,14 @@ const Hero = () => {
             Retiring the reboots. Making room for originality.
           </p>
 
-          <div className="mt-12 md:mt-16">
-            <AnimatedButton to="/about">
-              Discover Archway
-            </AnimatedButton>
+          <div className="mt-12 md:mt-16 flex justify-center">
+            <div className="relative group">
+              <AnimatedButton to="/about">
+                Discover Archway
+              </AnimatedButton>
+              <div className="absolute inset-0 bg-white/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 animate-pulse" />
+              <div className="absolute inset-0 bg-white/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+            </div>
           </div>
         </div>
       </section>

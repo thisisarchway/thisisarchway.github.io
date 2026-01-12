@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Film, Handshake, Smartphone, Clapperboard, Trophy, Ticket } from 'lucide-react';
+import { AnimatedSection } from './AnimatedSection';
 
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -51,23 +52,25 @@ const Services = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`group hover:bg-white/5 p-8 md:p-12 transition-all duration-700 bg-black relative overflow-hidden min-h-[320px] flex items-center justify-center cursor-pointer hover:scale-[1.02] hover:shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)] ${
-                activeIndex === index ? 'bg-white/5 scale-[1.02] shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)]' : ''
-              }`}
-              onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  setActiveIndex(activeIndex === index ? null : index);
-                }
-              }}
-              role="button"
-              tabIndex={0}
-              aria-expanded={activeIndex === index}
-            >
+          {services.map((service, index) => {
+            const delays = [0, 100, 125, 50, 150, 175];
+            return (
+            <AnimatedSection key={index} animation="fade-up" delay={delays[index]}>
+              <div
+                className={`group hover:bg-white/5 p-8 md:p-12 transition-all duration-700 bg-black relative overflow-hidden min-h-[320px] flex items-center justify-center cursor-pointer hover:scale-[1.02] hover:shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)] ${
+                  activeIndex === index ? 'bg-white/5 scale-[1.02] shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)]' : ''
+                }`}
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setActiveIndex(activeIndex === index ? null : index);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-expanded={activeIndex === index}
+              >
               {/* Atmospheric radial gradient glow - appears on hover */}
               <div className={`absolute inset-0 bg-gradient-radial from-white/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${
                 activeIndex === index ? 'opacity-100' : ''
@@ -99,8 +102,10 @@ const Services = () => {
                   {service.description}
                 </p>
               </div>
-            </div>
-          ))}
+              </div>
+            </AnimatedSection>
+            );
+          })}
         </div>
       </div>
     </section>

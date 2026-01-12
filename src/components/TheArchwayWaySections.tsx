@@ -60,7 +60,7 @@ const TheArchwayWaySections = () => {
               aria-expanded={hoveredIndex === index}
             >
               {/* Background image */}
-              <div 
+              <div
                 className={`absolute inset-0 rounded-lg bg-cover bg-center transition-opacity duration-500
                   ${hoveredIndex === index ? 'opacity-20' : 'opacity-100'}
                 `}
@@ -70,11 +70,21 @@ const TheArchwayWaySections = () => {
                   backgroundPosition: 'center'
                 }}
               />
-              
+
               {/* Dark overlay */}
               <div className={`absolute inset-0 rounded-lg transition-colors duration-500
                 ${hoveredIndex === index ? 'bg-black/85' : 'bg-black/50'}
               `} />
+
+              {/* Atmospheric radial gradient glow */}
+              <div className={`absolute inset-0 bg-gradient-radial from-white/[0.08] via-transparent to-transparent opacity-0 transition-opacity duration-500 pointer-events-none ${
+                hoveredIndex === index ? 'opacity-100' : ''
+              }`} />
+
+              {/* Subtle backdrop blur overlay */}
+              <div className={`absolute inset-0 backdrop-blur-[2px] opacity-0 transition-opacity duration-500 pointer-events-none ${
+                hoveredIndex === index ? 'opacity-100' : ''
+              }`} />
               
               {/* Large title - visible by default, fades out on hover with delay */}
               <div className={`absolute inset-0 flex items-center justify-center text-center tracking-wide px-4 leading-tight z-10
