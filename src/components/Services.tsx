@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Film, Handshake, Smartphone, Clapperboard, Trophy, Ticket } from 'lucide-react';
+import { AnimatedSection } from './AnimatedSection';
 
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -44,53 +45,67 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-12 md:py-20 px-4 md:px-8 bg-black">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 md:mb-16 text-center tracking-wide">
+    <section id="services" className="py-24 md:py-32 px-4 md:px-8 bg-black">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-5xl md:text-7xl lg:text-8xl text-white mb-16 md:mb-20 leading-tight tracking-tight">
           What We Do
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`group hover:bg-gray-800/50 hover:scale-102 hover:shadow-lg p-4 md:p-6 rounded-lg transition-all duration-300 border border-gray-700 bg-gray-900/30 relative overflow-hidden min-h-[200px] flex items-center justify-center cursor-pointer ${
-                activeIndex === index ? 'bg-gray-800/50 scale-102' : ''
-              }`}
-              onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  setActiveIndex(activeIndex === index ? null : index);
-                }
-              }}
-              role="button"
-              tabIndex={0}
-              aria-expanded={activeIndex === index}
-            >
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+          {services.map((service, index) => {
+            const delays = [0, 100, 125, 50, 150, 175];
+            return (
+            <AnimatedSection key={index} animation="fade-up" delay={delays[index]}>
+              <div
+                className={`group hover:bg-white/5 p-8 md:p-12 transition-all duration-700 bg-black relative overflow-hidden min-h-[320px] flex items-center justify-center cursor-pointer hover:scale-[1.02] hover:shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)] ${
+                  activeIndex === index ? 'bg-white/5 scale-[1.02] shadow-[0_20px_60px_-15px_rgba(255,255,255,0.1)]' : ''
+                }`}
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setActiveIndex(activeIndex === index ? null : index);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-expanded={activeIndex === index}
+              >
+              {/* Atmospheric radial gradient glow - appears on hover */}
+              <div className={`absolute inset-0 bg-gradient-radial from-white/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${
+                activeIndex === index ? 'opacity-100' : ''
+              }`} />
+
+              {/* Subtle backdrop blur overlay */}
+              <div className={`absolute inset-0 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${
+                activeIndex === index ? 'opacity-100' : ''
+              }`} />
+
               {/* Large title - visible by default, hidden on hover/active */}
-              <h3 className={`text-2xl md:text-3xl font-light text-white text-center group-hover:opacity-0 transition-opacity duration-300 absolute inset-0 flex items-center justify-center tracking-wide px-4 leading-tight ${
+              <h3 className={`text-2xl md:text-3xl font-light text-white text-center group-hover:opacity-0 transition-opacity duration-700 absolute inset-0 flex items-center justify-center tracking-tight px-6 leading-tight ${
                 activeIndex === index ? 'opacity-0' : ''
               }`}>
                 {service.title}
               </h3>
 
               {/* Content - hidden by default, visible on hover/active */}
-              <div className={`opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full text-center ${
+              <div className={`opacity-0 group-hover:opacity-100 transition-opacity duration-700 w-full text-center relative z-10 ${
                 activeIndex === index ? 'opacity-100' : ''
               }`}>
-                <div className="flex justify-center mb-4 text-white">
+                <div className="flex justify-center mb-6 text-white/80 group-hover:text-white transition-colors duration-700">
                   {service.icon}
                 </div>
-                <h4 className="text-lg md:text-xl font-medium text-white mb-3 md:mb-4 tracking-wide">
+                <h4 className="text-xl md:text-2xl font-light text-white mb-5 tracking-tight group-hover:brightness-110 transition-all duration-700">
                   {service.title}
                 </h4>
-                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                <p className="text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
                   {service.description}
                 </p>
               </div>
-            </div>
-          ))}
+              </div>
+            </AnimatedSection>
+            );
+          })}
         </div>
       </div>
     </section>

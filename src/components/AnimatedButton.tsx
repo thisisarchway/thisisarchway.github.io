@@ -20,12 +20,13 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   type = 'button',
   gifUrl = 'https://i.imgur.com/bLzVZKt.gif'
 }) => {
-  const baseClassName = `inline-block bg-white text-black px-8 py-3 font-medium hover:bg-gray-200 transition-all duration-300 rounded-lg relative overflow-hidden group ${className}`;
+  const baseClassName = `inline-block bg-white text-black px-10 py-4 font-light text-base tracking-wider hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition-all duration-500 rounded-lg relative overflow-hidden group [&:hover_.hover-text-target]:text-white ${className}`;
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
     e.currentTarget.style.backgroundImage = `url('${gifUrl}')`;
-    e.currentTarget.style.backgroundSize = 'cover';
+    e.currentTarget.style.backgroundSize = '100% 100%';
     e.currentTarget.style.backgroundPosition = 'center';
+    e.currentTarget.style.backgroundRepeat = 'no-repeat';
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
@@ -33,7 +34,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   };
 
   const content = (
-    <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+    <span className="relative z-10 text-black hover-text-target transition-colors duration-500">
       {children}
     </span>
   );

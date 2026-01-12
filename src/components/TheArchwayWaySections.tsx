@@ -32,17 +32,17 @@ const TheArchwayWaySections = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-8 bg-black">
+    <section className="py-24 md:py-32 px-4 md:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-12 md:mb-16 text-center tracking-wide">
+        <h2 className="text-5xl md:text-7xl lg:text-8xl text-white mb-16 md:mb-20 leading-tight tracking-tight">
           The Archway Way
         </h2>
         
-        <div className="flex flex-col md:flex-row w-full h-[400px] overflow-hidden rounded-lg">
+        <div className="flex flex-col md:flex-row w-full h-[800px] md:h-[400px] overflow-hidden rounded-lg">
           {principles.map((principle, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out
+              className={`relative overflow-y-auto md:overflow-hidden cursor-pointer transition-all duration-500 ease-in-out
                 ${hoveredIndex === index ? 'flex-[3] md:flex-[5]' : 'flex-1'}
                 ${hoveredIndex !== null && hoveredIndex !== index ? 'opacity-50' : ''}
               `}
@@ -60,7 +60,7 @@ const TheArchwayWaySections = () => {
               aria-expanded={hoveredIndex === index}
             >
               {/* Background image */}
-              <div 
+              <div
                 className={`absolute inset-0 rounded-lg bg-cover bg-center transition-opacity duration-500
                   ${hoveredIndex === index ? 'opacity-20' : 'opacity-100'}
                 `}
@@ -70,11 +70,21 @@ const TheArchwayWaySections = () => {
                   backgroundPosition: 'center'
                 }}
               />
-              
+
               {/* Dark overlay */}
               <div className={`absolute inset-0 rounded-lg transition-colors duration-500
                 ${hoveredIndex === index ? 'bg-black/85' : 'bg-black/50'}
               `} />
+
+              {/* Atmospheric radial gradient glow */}
+              <div className={`absolute inset-0 bg-gradient-radial from-white/[0.08] via-transparent to-transparent opacity-0 transition-opacity duration-500 pointer-events-none ${
+                hoveredIndex === index ? 'opacity-100' : ''
+              }`} />
+
+              {/* Subtle backdrop blur overlay */}
+              <div className={`absolute inset-0 backdrop-blur-[2px] opacity-0 transition-opacity duration-500 pointer-events-none ${
+                hoveredIndex === index ? 'opacity-100' : ''
+              }`} />
               
               {/* Large title - visible by default, fades out on hover with delay */}
               <div className={`absolute inset-0 flex items-center justify-center text-center tracking-wide px-4 leading-tight z-10
@@ -87,15 +97,15 @@ const TheArchwayWaySections = () => {
               </div>
               
               {/* Revealed content - hidden by default, fades in on hover with delay */}
-              <div className={`absolute inset-0 flex items-center justify-center z-10 px-4 text-center
+              <div className={`absolute inset-0 flex items-center justify-center z-10 px-6 md:px-4 py-8 md:py-0 text-center
                 transition-all duration-300 ease-in-out
                 ${hoveredIndex === index ? 'opacity-100 translate-y-0 scale-100 delay-300' : 'opacity-0 translate-y-8 scale-95 delay-0'}
               `}>
-                <div className="w-full">
-                  <h4 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 tracking-wide">
+                <div className="w-full max-w-2xl">
+                  <h4 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-4 md:mb-4 tracking-wide">
                     {principle.title}
                   </h4>
-                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                  <p className="text-base md:text-base text-gray-300 leading-relaxed">
                     {principle.description}
                   </p>
                 </div>

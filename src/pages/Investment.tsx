@@ -4,6 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import AnimatedButton from '../components/AnimatedButton';
 import HoverRevealCard from '../components/HoverRevealCard';
 import Layout from '../components/Layout';
+import { AnimatedSection } from '../components/AnimatedSection';
 
 const Investment = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -27,7 +28,7 @@ const Investment = () => {
     },
     {
       title: "The Edge",
-      description: "An investment in Archway is a strategic stake in culture today and years into the future. This is the chance to align with a generation obsessed with authenticity and build the trusted credibility that money cannot buy later.",
+      description: "A partnership with Archway is a strategic stake in culture today and years into the future. This is the chance to align with a generation obsessed with authenticity and build the trusted credibility that money cannot buy later.",
       backgroundImage: "https://i.imgur.com/q89glQ1.jpeg"
     }
   ];
@@ -52,21 +53,32 @@ const Investment = () => {
     <Layout>
       <div className="min-h-screen bg-black">
       <Helmet>
-        <title>Investment Opportunities - Archway Productions</title>
-        <meta name="description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
-        <link rel="canonical" href="https://thisisarchway.com/investment" />
-        <meta property="og:title" content="Investment Opportunities - Archway Productions" />
-        <meta property="og:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
+        <title>Partnership Opportunities - Archway Productions</title>
+        <meta name="description" content="Partner with Archway Productions to fund the future of storytelling. Strategic partnership opportunities in original content for Gen Z audiences." />
+        <link rel="canonical" href="https://thisisarchway.com/partnership" />
+        <meta property="og:title" content="Partnership Opportunities - Archway Productions" />
+        <meta property="og:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic partnership opportunities in original content for Gen Z audiences." />
+        <meta property="og:image" content="https://thisisarchway.com/logo.jpg" />
+        <meta property="og:url" content="https://thisisarchway.com/partnership" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Partnership Opportunities - Archway Productions" />
+        <meta name="twitter:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic partnership opportunities in original content for Gen Z audiences." />
+        <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
-      <div className="pt-20 pb-12 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
-            Investment Opportunity
-          </h1>
-          
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
-            Archway Productions is where creativity meets strategy. We partner with investors to fund a curated slate of original projects designed for cultural impact, strong market appeal, and long-term growth.
-          </p>
+      <div className="py-24 md:py-32 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection animation="fade-in">
+            <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-8 leading-[0.9] tracking-tight">
+              Partnership Opportunity
+            </h1>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mb-20 leading-relaxed font-light">
+              Where creativity meets strategy. We partner with strategic capital partners to fund a curated slate of original projects designed for cultural impact, market appeal, and sustainable growth.
+            </p>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {opportunities.map((opportunity, index) => (
@@ -90,17 +102,20 @@ const Investment = () => {
           </div>
 
           {/* Bold Statement */}
-          <div className="text-center mb-16">
-            <p className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-wide">
-              Not taking risks is a risk.
-            </p>
-            <p className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-wide mt-2">
-              Archway is the path forward.
-            </p>
-          </div>
+          <AnimatedSection animation="scale" delay={200}>
+            <div className="text-center mb-20 py-12">
+              <p className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight mb-4">
+                Not taking risks is a risk.
+              </p>
+              <p className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight">
+                <span className="font-normal">Archway</span> is the path forward.
+              </p>
+            </div>
+          </AnimatedSection>
 
           {/* Why Invest With Archway */}
-          <div className="mb-16">
+          <AnimatedSection animation="fade-up" delay={300}>
+            <div className="mb-16">
             <div className="space-y-4">
               {qaItems.map((item, index) => (
                 <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-lg overflow-hidden">
@@ -108,7 +123,7 @@ const Investment = () => {
                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors duration-300"
                   >
-                    <h3 className="text-lg md:text-xl font-medium text-white">
+                    <h3 className="text-lg md:text-xl font-light text-white">
                       {item.question}
                     </h3>
                     <ChevronDown 
@@ -127,19 +142,22 @@ const Investment = () => {
                 </div>
               ))}
             </div>
-          </div>
+            </div>
+          </AnimatedSection>
 
-          <div className="bg-gray-900/50 p-8 text-center border border-gray-700 rounded-lg">
-            <h3 className="text-2xl font-medium text-white mb-4">
-              Let's Build the Future of Storytelling Together.
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
-              We're in active development on our first slate and are now aligning with capital partners who see the generational shift in entertainment as their greatest opportunity.
-            </p>
-            <AnimatedButton href="mailto:contact@thisisarchway.com">
-              Send an Introduction
-            </AnimatedButton>
-          </div>
+          <AnimatedSection animation="scale" delay={400}>
+            <div className="bg-gray-900/50 p-12 text-center border border-gray-700 rounded-lg hover:bg-gray-800/50 hover:border-gray-500 transition-all duration-500">
+              <h3 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-tight">
+                Let's Build the Future of Storytelling
+              </h3>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                We're in active development on our first slate and aligning with capital partners who recognize the generational shift in entertainment as the opportunity of a lifetime.
+              </p>
+              <AnimatedButton href="mailto:contact@thisisarchway.com">
+                Start the Conversation
+              </AnimatedButton>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
       </div>

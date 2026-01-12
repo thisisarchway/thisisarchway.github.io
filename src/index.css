@@ -7,10 +7,29 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+  }
+
+  h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 }
 

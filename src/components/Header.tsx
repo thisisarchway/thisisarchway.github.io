@@ -38,6 +38,8 @@ const Header = () => {
                 src="/logo.jpg"
                 alt="Archway Productions Logo"
                 className="w-32 h-auto"
+                width="128"
+                height="128"
                 loading="lazy"
               />
             </Link>
@@ -102,15 +104,15 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    to="/investment"
+                    to="/partnership"
                     className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/investment' ? 'text-gray-400 font-medium' : 'text-white'
+                      location.pathname === '/partnership' ? 'text-gray-400 font-medium' : 'text-white'
                     }`}
                     onClick={() => {
                       setIsMenuOpen(false);
                     }}
                   >
-                    Invest
+                    Partner
                   </Link>
                 </li>
                 <li>

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Film, TrendingUp, Users, Globe, Lightbulb, DollarSign } from 'lucide-react';
 import AnimatedButton from '../components/AnimatedButton';
 import Layout from '../components/Layout';
+import { AnimatedSection } from '../components/AnimatedSection';
 
 const Collaborators = () => {
   const services = [
@@ -76,25 +77,37 @@ const Collaborators = () => {
         <link rel="canonical" href="https://thisisarchway.com/collaborators" />
         <meta property="og:title" content="Join Our Creative Collective - Archway Productions" />
         <meta property="og:description" content="Collaborate with Archway Productions. We support emerging filmmakers, producers, content creators, and writers with funding, development, and distribution." />
+        <meta property="og:image" content="https://thisisarchway.com/logo.jpg" />
+        <meta property="og:url" content="https://thisisarchway.com/collaborators" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Join Our Creative Collective - Archway Productions" />
+        <meta name="twitter:description" content="Collaborate with Archway Productions. We support emerging filmmakers, producers, content creators, and writers with funding, development, and distribution." />
+        <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
-      <div className="pt-20 pb-12 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
-            Join Our Creative Collective
-          </h1>
-          
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
-            If you create work that surprises, resonates, or challenges, we want to collaborate.
-          </p>
+      <div className="py-24 md:py-32 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection animation="fade-in">
+            <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-8 leading-[0.9] tracking-tight">
+              Join Our Creative Collective
+            </h1>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-20 leading-relaxed font-light">
+              If your work surprises, resonates, or challenges convention, we want to collaborate.
+            </p>
+          </AnimatedSection>
 
           {/* What We Offer */}
           <div className="mb-24">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
-              How We Support
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+            <AnimatedSection animation="fade-up" delay={200}>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-12 text-center tracking-tight">
+                How We Support
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
                 <div 
                   key={index} 
                   className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 hover:bg-gray-800/50 hover:border-white transition-all duration-300 group cursor-pointer relative overflow-hidden min-h-[200px] flex items-center justify-center"
@@ -116,7 +129,7 @@ const Collaborators = () => {
                   <div className="absolute inset-0 bg-black/70 group-hover:bg-black/85 transition-colors duration-300" />
                   
                   {/* Large title - visible by default, hidden on hover */}
-                  <h3 className="text-2xl md:text-3xl font-light text-white text-center group-hover:scale-95 group-hover:translate-y-2 group-hover:opacity-0 transition-all duration-300 absolute inset-0 flex items-center justify-center tracking-wide px-4 leading-tight z-10">
+                  <h3 className="text-2xl md:text-3xl font-light text-white text-center group-hover:scale-95 group-hover:translate-y-2 group-hover:opacity-0 transition-all duration-300 absolute inset-0 flex items-center justify-center tracking-tight px-4 leading-tight z-10">
                     {service.title}
                   </h3>
                   
@@ -132,28 +145,30 @@ const Collaborators = () => {
                     </p>
                     <ul className="space-y-1 text-center">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-sm text-gray-500 italic flex items-center justify-center">
-                          <span className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-2"></span>
+                        <li key={benefitIndex} className="text-sm text-gray-400 italic flex items-center justify-center">
+                          <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </AnimatedSection>
           </div>
 
           {/* Who We're Looking For */}
           <div className="mb-24">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
-              Who We're Looking For
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {collaboratorTypes.map((type, index) => (
-                <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 text-center">
-                  <h3 className="text-xl font-medium text-white mb-3 text-center">
+            <AnimatedSection animation="fade-up" delay={300}>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-12 text-center tracking-tight">
+                Who We're Looking For
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {collaboratorTypes.map((type, index) => (
+                <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 text-center hover:bg-gray-800/50 hover:border-white hover:scale-[1.02] transition-all duration-700">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3 text-center tracking-tight">
                     {type.title}
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed text-center">
@@ -163,17 +178,19 @@ const Collaborators = () => {
                     {type.ideal}
                   </p>
                 </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </AnimatedSection>
           </div>
 
           {/* Our Process */}
           <div className="mb-24">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-8 text-center tracking-wide">
-              Our Process
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+            <AnimatedSection animation="fade-up" delay={400}>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-12 text-center tracking-tight">
+                Our Process
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               <div className="text-center group relative overflow-hidden rounded-lg p-6 transition-all duration-300 hover:bg-gray-800/50 bg-gray-900/50 border border-gray-700">
                 {/* Background image for step 1 */}
                 <div 
@@ -188,10 +205,10 @@ const Collaborators = () => {
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-medium">
                     1
                   </div>
-                  <h3 className="text-lg font-medium text-white mb-2">Submit</h3>
+                  <h3 className="text-lg font-light text-white mb-2">Submit</h3>
                   <p className="text-gray-300 text-sm">Send us your project pitch, script, or creative portfolio</p>
                 </div>
               </div>
@@ -210,10 +227,10 @@ const Collaborators = () => {
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-medium">
                     2
                   </div>
-                  <h3 className="text-lg font-medium text-white mb-2">Review</h3>
+                  <h3 className="text-lg font-light text-white mb-2">Review</h3>
                   <p className="text-gray-300 text-sm">Our team evaluates your project for creative and commercial potential</p>
                 </div>
               </div>
@@ -232,10 +249,10 @@ const Collaborators = () => {
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-medium">
                     3
                   </div>
-                  <h3 className="text-lg font-medium text-white mb-2">Selection</h3>
+                  <h3 className="text-lg font-light text-white mb-2">Selection</h3>
                   <p className="text-gray-300 text-sm">We will notify you if you are selected to move forward with us</p>
                 </div>
               </div>
@@ -254,10 +271,10 @@ const Collaborators = () => {
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-medium">
                     4
                   </div>
-                  <h3 className="text-lg font-medium text-white mb-2">Develop</h3>
+                  <h3 className="text-lg font-light text-white mb-2">Develop</h3>
                   <p className="text-gray-300 text-sm">Work together to refine your concept and create a production plan</p>
                 </div>
               </div>
@@ -276,30 +293,33 @@ const Collaborators = () => {
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                  <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4 font-medium">
                     5
                   </div>
-                  <h3 className="text-lg font-medium text-white mb-2">Produce</h3>
+                  <h3 className="text-lg font-light text-white mb-2">Produce</h3>
                   <p className="text-gray-300 text-sm">Bring your vision to life with full production and distribution support</p>
                 </div>
               </div>
             </div>
+            </AnimatedSection>
           </div>
 
           {/* Call to Action */}
-          <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-medium text-white mb-4">
-              The Story Starts Here
-            </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
-              We're here for stories that defy expectations and leave a mark. If that's yours, submit your project for consideration.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <AnimatedButton href="mailto:contact@thisisarchway.com">
-                Submit Your Project
-              </AnimatedButton>
+          <AnimatedSection animation="scale" delay={500}>
+            <div className="bg-gray-900/50 border border-gray-700 rounded-lg p-12 text-center hover:bg-gray-800/50 hover:border-gray-500 transition-all duration-500">
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-6 tracking-tight">
+                Your Story Starts Here
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                We champion stories that defy expectations and leave their mark. If that sounds like yours, let's talk.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <AnimatedButton href="mailto:contact@thisisarchway.com">
+                  Submit Your Project
+                </AnimatedButton>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
       </div>

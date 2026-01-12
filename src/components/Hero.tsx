@@ -1,33 +1,13 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import AnimatedButton from './AnimatedButton';
+import { useParallax } from '../hooks/useParallax';
+import { StaggeredText } from './StaggeredText';
 
 const Hero = () => {
-  const [videoError, setVideoError] = React.useState(false);
-  const videoRef = React.useRef<HTMLVideoElement>(null);
-
-  React.useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.muted = true;
-      video.volume = 0;
-      video.setAttribute('webkit-playsinline', 'true');
-
-      const attemptPlay = () => {
-        video.play().catch((error) => {
-          console.log('Video autoplay failed:', error);
-          setVideoError(true);
-        });
-      };
-
-      if (video.readyState >= 3) {
-        attemptPlay();
-      } else {
-        video.addEventListener('loadedmetadata', attemptPlay, { once: true });
-        video.addEventListener('canplay', attemptPlay, { once: true });
-      }
-    }
-  }, []);
+  const [videoLoaded, setVideoLoaded] = React.useState(false);
+  const { ref: videoRef, offset: videoOffset } = useParallax({ speed: 0.3 });
+  const { ref: textRef, offset: textOffset } = useParallax({ speed: 0.15 });
 
   const scrollToNext = () => {
     const introSection = document.getElementById('intro');
@@ -39,60 +19,73 @@ const Hero = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center">
-        <div className="absolute inset-0">
-          {!videoError ? (
-            <video
-              ref={videoRef}
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster="/hero_still.jpg"
-              preload="auto"
-              className="w-full h-full object-cover"
-              onError={() => setVideoError(true)}
-              style={{ WebkitTransform: 'translateZ(0)' }}
-            >
-              <source src="https://www.dropbox.com/scl/fi/pg1d5ej4j700vlihwjudx/Hero-Vid.mp4?rlkey=b1php0tpzxasi2laro832o5jf&st=oeqzan4e&raw=1" type="video/mp4" />
-            </video>
-          ) : (
+      <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center" style={{ willChange: 'auto' }}>
+        <div ref={videoRef} className="absolute inset-0" style={{ isolation: 'isolate', transform: `translateY(${videoOffset}px)` }}>
+          {!videoLoaded && (
             <img
-              src="/hero_still.jpg"
+              src="/hero-fallback.jpg"
               alt="Archway Productions"
               className="w-full h-full object-cover"
+              width="1920"
+              height="1080"
             />
           )}
+          <video
+            src="https://www.dropbox.com/scl/fi/f48v1r3w0p0w80p4l8jut/Hero-Vid.mp4?rlkey=w0ezy7rcmqu2ezphisvqzscbc&st=ctvjanqb&dl=1"
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            onLoadedData={() => setVideoLoaded(true)}
+            style={{
+              opacity: videoLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease-in-out',
+              WebkitTransform: 'translateZ(0)',
+              transform: 'translateZ(0)',
+              backfaceVisibility: 'hidden'
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
         </div>
 
         {/* Scroll Arrow */}
         <button
           onClick={scrollToNext}
-          className="relative z-10 mb-12 group animate-bounce"
+          className="relative z-10 mb-12 group"
           aria-label="Scroll to next section"
+          style={{ willChange: 'transform' }}
         >
-          <ChevronDown className="w-8 h-8 text-white/80 group-hover:text-white transition-all duration-300 drop-shadow-lg" />
+          <ChevronDown className="w-8 h-8 text-white/80 group-hover:text-white transition-colors duration-300 drop-shadow-lg" />
         </button>
       </section>
 
       {/* Intro Section */}
-      <section id="intro" className="py-12 md:py-20 px-4 md:px-8 bg-black text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-4 md:mb-6 leading-tight tracking-wide">
-            At <span className="font-normal">Archway Productions</span>,
+      <section id="intro" className="py-24 md:py-32 px-4 md:px-8 bg-black">
+        <div ref={textRef} className="max-w-7xl mx-auto" style={{ transform: `translateY(${textOffset}px)` }}>
+          <h2 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white mb-6 md:mb-8 leading-[0.95] tracking-tight">
+            <StaggeredText staggerDelay={30}>
+              At Archway Productions,
+            </StaggeredText>
           </h2>
-          <p className="text-2xl md:text-4xl lg:text-5xl font-light text-white mb-6 md:mb-8 leading-tight tracking-wide">
-            The Future Is Not Franchised.
+          <p className="text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] text-white mb-10 md:mb-12 leading-[0.9] tracking-tight">
+            <StaggeredText staggerDelay={50}>
+              The Future Is Not Franchised.
+            </StaggeredText>
           </p>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed px-4">
-            We're retiring the reboots and making room for quality, original projects.
+          <div className="h-px w-24 bg-white/20 mb-10 md:mb-12"></div>
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-400 leading-relaxed font-light max-w-4xl">
+            Retiring the reboots. Making room for originality.
           </p>
-          
-          <div className="mt-8 md:mt-12">
-            <AnimatedButton to="/about">
-              About Archway
-            </AnimatedButton>
+
+          <div className="mt-12 md:mt-16 flex justify-center">
+            <div className="relative group">
+              <AnimatedButton to="/about">
+                Discover Archway
+              </AnimatedButton>
+              <div className="absolute inset-0 bg-white/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 animate-pulse" />
+              <div className="absolute inset-0 bg-white/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+            </div>
           </div>
         </div>
       </section>

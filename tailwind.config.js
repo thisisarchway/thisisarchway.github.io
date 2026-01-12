@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
+        'display': ['Playfair Display', 'serif'],
       },
       fontWeight: {
         'thin': '100',
@@ -12,6 +13,9 @@ export default {
         'normal': '400',
         'medium': '500',
         'semibold': '600',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
       }
     },
   },
