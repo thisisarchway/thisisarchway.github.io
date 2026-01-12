@@ -47,7 +47,7 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                   <div className="relative z-10">
-                    <div className="mb-10 group-hover:brightness-110 transition-all duration-700">
+                    <div className="mb-10">
                       <AnimatedButton to="/investment">
                         Explore Investment
                       </AnimatedButton>
@@ -72,7 +72,7 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                   <div className="relative z-10">
-                    <div className="mb-10 group-hover:brightness-110 transition-all duration-700">
+                    <div className="mb-10">
                       <AnimatedButton to="/collaborators">
                         Join the Collective
                       </AnimatedButton>
