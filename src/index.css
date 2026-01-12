@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* Fix viewport overflow and white space on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  max-width: 100vw;
+}
 @layer base {
   body {
     font-family: 'Inter', sans-serif;

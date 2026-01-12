@@ -21,31 +21,49 @@ const Hero = () => {
       {/* Hero Section */}
       <section className="relative w-full h-screen overflow-hidden bg-black flex items-end justify-center" style={{ willChange: 'auto' }}>
         <div ref={videoRef} className="absolute inset-0" style={{ isolation: 'isolate', transform: `translateY(${videoOffset}px)` }}>
-          {!videoLoaded && (
-            <img
-              src="/hero-fallback.jpg"
-              alt="Archway Productions"
-              className="w-full h-full object-cover"
-              width="1920"
-              height="1080"
-            />
-          )}
+          {/* Fallback image shows while video loads or if it fails */}
+          <img
+            src="/hero-fallback.jpg"
+            alt="Archway Productions"
+            className="w-full h-full object-cover"
+            width="1920"
+            height="1080"
+            style={{ 
+              opacity: videoLoaded ? 0 : 1, 
+              transition: 'opacity 0.5s ease-in-out',
+              position: 'absolute',
+              top: 0,
+              left: 0
+            }}
+          />
+          
+          {/* Video plays on both desktop AND mobile */}
           <video
-            src="https://www.dropbox.com/scl/fi/f48v1r3w0p0w80p4l8jut/Hero-Vid.mp4?rlkey=w0ezy7rcmqu2ezphisvqzscbc&st=ctvjanqb&dl=1"
+            src="/hero-video.mp4"
             className="w-full h-full object-cover"
             autoPlay
             loop
             muted
             playsInline
-            onLoadedData={() => setVideoLoaded(true)}
+            preload="auto"
+            crossOrigin="anonymous"
+            onCanPlay={() => setVideoLoaded(true)}
+            onError={() => {
+              console.error('Video failed to load, using fallback image');
+              setVideoLoaded(false);
+            }}
             style={{
               opacity: videoLoaded ? 1 : 0,
-              transition: 'opacity 0.3s ease-in-out',
+              transition: 'opacity 0.5s ease-in-out',
+              position: 'absolute',
+              top: 0,
+              left: 0,
               WebkitTransform: 'translateZ(0)',
               transform: 'translateZ(0)',
               backfaceVisibility: 'hidden'
             }}
           />
+          
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
         </div>
 
