@@ -28,7 +28,7 @@ const Investment = () => {
     },
     {
       title: "The Edge",
-      description: "An investment in Archway is a strategic stake in culture today and years into the future. This is the chance to align with a generation obsessed with authenticity and build the trusted credibility that money cannot buy later.",
+      description: "A partnership with Archway is a strategic stake in culture today and years into the future. This is the chance to align with a generation obsessed with authenticity and build the trusted credibility that money cannot buy later.",
       backgroundImage: "https://i.imgur.com/q89glQ1.jpeg"
     }
   ];
@@ -53,30 +53,30 @@ const Investment = () => {
     <Layout>
       <div className="min-h-screen bg-black">
       <Helmet>
-        <title>Investment Opportunities - Archway Productions</title>
-        <meta name="description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
+        <title>Partnership Opportunities - Archway Productions</title>
+        <meta name="description" content="Partner with Archway Productions to fund the future of storytelling. Strategic partnership opportunities in original content for Gen Z audiences." />
         <link rel="canonical" href="https://thisisarchway.com/investment" />
-        <meta property="og:title" content="Investment Opportunities - Archway Productions" />
-        <meta property="og:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
+        <meta property="og:title" content="Partnership Opportunities - Archway Productions" />
+        <meta property="og:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic partnership opportunities in original content for Gen Z audiences." />
         <meta property="og:image" content="https://thisisarchway.com/logo.jpg" />
         <meta property="og:url" content="https://thisisarchway.com/investment" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Investment Opportunities - Archway Productions" />
-        <meta name="twitter:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic investment opportunities in original content for Gen Z audiences." />
+        <meta name="twitter:title" content="Partnership Opportunities - Archway Productions" />
+        <meta name="twitter:description" content="Partner with Archway Productions to fund the future of storytelling. Strategic partnership opportunities in original content for Gen Z audiences." />
         <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
       <div className="py-24 md:py-32 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in">
             <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-8 leading-[0.9] tracking-tight">
-              Investment Opportunity
+              Partnership Opportunity
             </h1>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mb-20 leading-relaxed font-light">
-              Where creativity meets strategy. We partner with investors to fund a curated slate of original projects designed for cultural impact, market appeal, and sustainable growth.
+              Where creativity meets strategy. We partner with strategic capital partners to fund a curated slate of original projects designed for cultural impact, market appeal, and sustainable growth.
             </p>
           </AnimatedSection>
 
