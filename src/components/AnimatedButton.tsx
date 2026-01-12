@@ -24,8 +24,9 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
     e.currentTarget.style.backgroundImage = `url('${gifUrl}')`;
-    e.currentTarget.style.backgroundSize = 'cover';
+    e.currentTarget.style.backgroundSize = '100% 100%';
     e.currentTarget.style.backgroundPosition = 'center';
+    e.currentTarget.style.backgroundRepeat = 'no-repeat';
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
