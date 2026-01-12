@@ -36,15 +36,12 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
               {/* Investment Box */}
               <AnimatedSection animation="slide-right" delay={100}>
-                <div className="border-t border-white/10 pt-12 group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02]">
+                <div className="p-8 rounded-lg group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02] bg-white/[0.02] hover:bg-white/[0.04]">
                   {/* Large atmospheric radial gradient glow */}
                   <div className="absolute -inset-20 bg-gradient-radial from-white/[0.12] via-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                  {/* Top border glow effect */}
-                  <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
                   {/* Atmospheric fog-like overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                   <div className="relative z-10">
                     <div className="mb-10">
@@ -61,15 +58,12 @@ const Home = () => {
 
               {/* Creative Cohort Box */}
               <AnimatedSection animation="slide-left" delay={200}>
-                <div className="border-t border-white/10 pt-12 group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02]">
+                <div className="p-8 rounded-lg group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02] bg-white/[0.02] hover:bg-white/[0.04]">
                   {/* Large atmospheric radial gradient glow */}
                   <div className="absolute -inset-20 bg-gradient-radial from-white/[0.12] via-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                  {/* Top border glow effect */}
-                  <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
                   {/* Atmospheric fog-like overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                   <div className="relative z-10">
                     <div className="mb-10">
