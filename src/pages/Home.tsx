@@ -47,17 +47,14 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                   <div className="relative z-10">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8 tracking-tight leading-tight group-hover:brightness-110 transition-all duration-700">
-                      Ready to Fund the Future?
-                    </h3>
-                    <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
-                      We're seeking strategic partners who share our vision for original, culturally relevant storytelling. Join us in shaping the next generation of entertainment.
-                    </p>
-                    <div className="group-hover:brightness-110 transition-all duration-700">
+                    <div className="mb-10 group-hover:brightness-110 transition-all duration-700">
                       <AnimatedButton to="/investment">
                         Explore Investment
                       </AnimatedButton>
                     </div>
+                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
+                      We're seeking strategic partners who share our vision for original, culturally relevant storytelling. Join us in shaping the next generation of entertainment.
+                    </p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -75,17 +72,14 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                   <div className="relative z-10">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8 tracking-tight leading-tight group-hover:brightness-110 transition-all duration-700">
-                      Ready to Share Your Story?
-                    </h3>
-                    <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
-                      Join our collective of visionary filmmakers, writers, and creators. We're building a community that champions the new wave of bold, authentic storytelling.
-                    </p>
-                    <div className="group-hover:brightness-110 transition-all duration-700">
+                    <div className="mb-10 group-hover:brightness-110 transition-all duration-700">
                       <AnimatedButton to="/collaborators">
                         Join the Collective
                       </AnimatedButton>
                     </div>
+                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
+                      Join our collective of visionary filmmakers, writers, and creators. We're building a community that champions the new wave of bold, authentic storytelling.
+                    </p>
                   </div>
                 </div>
               </AnimatedSection>
