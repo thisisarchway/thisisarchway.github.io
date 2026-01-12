@@ -5,6 +5,7 @@ import HoverRevealCard from '../components/HoverRevealCard';
 import Layout from '../components/Layout';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { StructuredDataAbout } from '../components/StructuredDataAbout';
+import { StaggeredText } from '../components/StaggeredText';
 
 const About = () => {
   useEffect(() => {
@@ -33,7 +34,9 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in">
             <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-24 leading-[0.9] tracking-tight">
-              About Archway
+              <StaggeredText staggerDelay={60}>
+                About Archway
+              </StaggeredText>
             </h1>
           </AnimatedSection>
 

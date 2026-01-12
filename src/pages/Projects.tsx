@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { StructuredDataProjects } from '../components/StructuredDataProjects';
+import { StaggeredText } from '../components/StaggeredText';
+import { useParallax } from '../hooks/useParallax';
 
 const Projects = () => {
   const projects = [
@@ -54,48 +56,65 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in">
             <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-24 leading-[0.9] tracking-tight">
-              Projects
+              <StaggeredText staggerDelay={60}>
+                Projects
+              </StaggeredText>
             </h1>
           </AnimatedSection>
 
           <div className="space-y-32">
-            {projects.map((project, index) => (
-              <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
-                <div className="group max-w-5xl mx-auto">
-                  <div className="relative overflow-hidden bg-black">
-                    <img
-                      src={project.image}
-                      alt={`${project.title} - ${project.description}`}
-                      className="w-full h-[500px] md:h-[600px] object-cover object-center transition-all duration-700 ease-out group-hover:scale-105 group-hover:opacity-90"
-                      width="1200"
-                      height="600"
-                      loading="lazy"
-                      decoding="async"
-                    />
+            {projects.map((project, index) => {
+              const ProjectImage = () => {
+                const { ref, offset } = useParallax({ speed: 0.2 });
+
+                return (
+                  <div ref={ref} className="relative overflow-hidden bg-black rounded-lg">
+                    <div
+                      className="transition-transform duration-700 ease-out"
+                      style={{ transform: `scale(1.1) translateY(${offset}px)` }}
+                    >
+                      <img
+                        src={project.image}
+                        alt={`${project.title} - ${project.description}`}
+                        className="w-full h-[500px] md:h-[600px] object-cover object-center transition-all duration-700 ease-out group-hover:scale-105 group-hover:opacity-90"
+                        width="1200"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
-                    <div className="absolute top-6 left-6 flex gap-3">
-                      <span className="bg-white text-black px-4 py-1.5 text-xs font-semibold tracking-widest uppercase">
+                    <div className="absolute top-6 left-6 flex gap-3 z-10">
+                      <span className="bg-white text-black px-4 py-1.5 text-xs font-semibold tracking-widest uppercase transition-transform duration-300 group-hover:scale-105">
                         {project.category}
                       </span>
-                      <span className="bg-black/60 backdrop-blur-sm border border-white/20 text-white px-4 py-1.5 text-xs font-medium tracking-widest uppercase">
+                      <span className="bg-black/60 backdrop-blur-sm border border-white/20 text-white px-4 py-1.5 text-xs font-medium tracking-widest uppercase transition-all duration-300 group-hover:border-white/40">
                         {project.status}
                       </span>
                     </div>
                   </div>
-                  <div className="mt-12 px-4 md:px-8">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8 tracking-tight group-hover:text-gray-300 transition-colors duration-300">
-                      {project.title}
-                    </h2>
-                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6 max-w-3xl">
-                      {project.description}
-                    </p>
-                    <p className="text-sm text-gray-600 tracking-wide">
-                      {project.credit}
-                    </p>
+                );
+              };
+
+              return (
+                <AnimatedSection key={index} animation="zoom" delay={index * 100}>
+                  <div className="group max-w-5xl mx-auto">
+                    <ProjectImage />
+                    <div className="mt-12 px-4 md:px-8">
+                      <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8 tracking-tight group-hover:text-gray-300 transition-colors duration-300">
+                        {project.title}
+                      </h2>
+                      <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6 max-w-3xl transition-all duration-500 group-hover:text-gray-300">
+                        {project.description}
+                      </p>
+                      <p className="text-sm text-gray-600 tracking-wide transition-colors duration-300 group-hover:text-gray-500">
+                        {project.credit}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </div>

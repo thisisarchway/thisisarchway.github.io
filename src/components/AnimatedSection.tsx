@@ -3,7 +3,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface AnimatedSectionProps {
   children: ReactNode;
-  animation?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'scale';
+  animation?: 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'scale' | 'zoom' | 'blur' | 'rotate' | 'flip-up' | 'slide-up-fade';
   delay?: number;
   className?: string;
 }
@@ -22,9 +22,14 @@ export const AnimatedSection = ({
     'slide-left': 'opacity-0 -translate-x-8',
     'slide-right': 'opacity-0 translate-x-8',
     'scale': 'opacity-0 scale-95',
+    'zoom': 'opacity-0 scale-150',
+    'blur': 'opacity-0 blur-sm',
+    'rotate': 'opacity-0 rotate-6',
+    'flip-up': 'opacity-0 -rotate-x-90',
+    'slide-up-fade': 'opacity-0 translate-y-12',
   };
 
-  const visibleClasses = 'opacity-100 translate-y-0 translate-x-0 scale-100';
+  const visibleClasses = 'opacity-100 translate-y-0 translate-x-0 scale-100 blur-0 rotate-0';
 
   return (
     <div

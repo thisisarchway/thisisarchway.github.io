@@ -6,6 +6,8 @@ import Services from '../components/Services';
 import AnimatedButton from '../components/AnimatedButton';
 import Layout from '../components/Layout';
 import { AnimatedSection } from '../components/AnimatedSection';
+import { MagneticCard } from '../components/MagneticCard';
+import { StaggeredText } from '../components/StaggeredText';
 
 const Home = () => {
   return (
@@ -31,51 +33,57 @@ const Home = () => {
         <section className="py-24 md:py-32 px-4 md:px-8 bg-black">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-5xl md:text-7xl lg:text-8xl text-white mb-16 leading-tight tracking-tight">
-              Ready to Get Involved?
+              <StaggeredText staggerDelay={40}>
+                Ready to Get Involved?
+              </StaggeredText>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
               {/* Investment Box */}
               <AnimatedSection animation="slide-right" delay={100}>
-                <div className="p-8 rounded-lg group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02] bg-white/[0.02] hover:bg-white/[0.04]">
-                  {/* Large atmospheric radial gradient glow */}
-                  <div className="absolute -inset-20 bg-gradient-radial from-white/[0.12] via-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <MagneticCard strength={0.12}>
+                  <div className="p-8 rounded-lg group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02] bg-white/[0.02] hover:bg-white/[0.04]">
+                    {/* Large atmospheric radial gradient glow */}
+                    <div className="absolute -inset-20 bg-gradient-radial from-white/[0.12] via-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                  {/* Atmospheric fog-like overlay */}
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                    {/* Atmospheric fog-like overlay */}
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                  <div className="relative z-10">
-                    <div className="mb-10">
-                      <AnimatedButton to="/investment">
-                        Explore Partnerships
-                      </AnimatedButton>
+                    <div className="relative z-10">
+                      <div className="mb-10">
+                        <AnimatedButton to="/investment">
+                          Explore Partnerships
+                        </AnimatedButton>
+                      </div>
+                      <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
+                        We're seeking strategic partners who share our vision for original, culturally relevant storytelling. Join us in shaping the next generation of entertainment.
+                      </p>
                     </div>
-                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
-                      We're seeking strategic partners who share our vision for original, culturally relevant storytelling. Join us in shaping the next generation of entertainment.
-                    </p>
                   </div>
-                </div>
+                </MagneticCard>
               </AnimatedSection>
 
               {/* Creative Cohort Box */}
               <AnimatedSection animation="slide-left" delay={200}>
-                <div className="p-8 rounded-lg group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02] bg-white/[0.02] hover:bg-white/[0.04]">
-                  {/* Large atmospheric radial gradient glow */}
-                  <div className="absolute -inset-20 bg-gradient-radial from-white/[0.12] via-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <MagneticCard strength={0.12}>
+                  <div className="p-8 rounded-lg group relative transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(255,255,255,0.15)] hover:scale-[1.02] bg-white/[0.02] hover:bg-white/[0.04]">
+                    {/* Large atmospheric radial gradient glow */}
+                    <div className="absolute -inset-20 bg-gradient-radial from-white/[0.12] via-white/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                  {/* Atmospheric fog-like overlay */}
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                    {/* Atmospheric fog-like overlay */}
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                  <div className="relative z-10">
-                    <div className="mb-10">
-                      <AnimatedButton to="/collaborators">
-                        Explore Collaboration
-                      </AnimatedButton>
+                    <div className="relative z-10">
+                      <div className="mb-10">
+                        <AnimatedButton to="/collaborators">
+                          Explore Collaboration
+                        </AnimatedButton>
+                      </div>
+                      <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
+                        Join our collective of visionary filmmakers, writers, and creators. We're building a community that champions the new wave of bold, authentic storytelling.
+                      </p>
                     </div>
-                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
-                      Join our collective of visionary filmmakers, writers, and creators. We're building a community that champions the new wave of bold, authentic storytelling.
-                    </p>
                   </div>
-                </div>
+                </MagneticCard>
               </AnimatedSection>
             </div>
           </div>
