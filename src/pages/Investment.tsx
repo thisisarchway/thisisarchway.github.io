@@ -67,15 +67,15 @@ const Investment = () => {
         <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
       <div className="py-24 md:py-32 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-8 text-center tracking-tight">
+            <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-8 leading-[0.9] tracking-tight">
               Investment Opportunity
             </h1>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto text-center mb-20 leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mb-20 leading-relaxed font-light">
               Where creativity meets strategy. We partner with investors to fund a curated slate of original projects designed for cultural impact, market appeal, and sustainable growth.
             </p>
           </AnimatedSection>

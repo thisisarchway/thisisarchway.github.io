@@ -31,15 +31,15 @@ const Contact = () => {
         <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
       <div className="py-24 md:py-32 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-8 text-center tracking-tight">
+            <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-8 leading-[0.9] tracking-tight">
               Get In Touch
             </h1>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-up" delay={100}>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mb-16 leading-relaxed">
               Whether you're a creator, investor, or collaborator, we'd love to hear from you.
             </p>
           </AnimatedSection>

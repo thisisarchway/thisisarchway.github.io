@@ -30,6 +30,9 @@ const Home = () => {
         <Services />
         <section className="py-24 md:py-32 px-4 md:px-8 bg-black">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl text-white mb-16 leading-tight tracking-tight">
+              Ready to Get Involved?
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
               {/* Investment Box */}
               <AnimatedSection animation="slide-right" delay={100}>

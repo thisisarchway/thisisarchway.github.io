@@ -12,7 +12,7 @@ const NotFound = () => {
           <meta name="description" content="The page you're looking for doesn't exist." />
         </Helmet>
         <div className="text-center max-w-2xl">
-          <h1 className="text-6xl md:text-8xl font-light text-white mb-4">
+          <h1 className="text-7xl md:text-9xl lg:text-[8rem] text-white mb-4 leading-[0.9] tracking-tight">
             404
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-4">

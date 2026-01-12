@@ -30,9 +30,9 @@ const About = () => {
       </Helmet>
       <StructuredDataAbout />
       <div className="pt-32 pb-24 px-4 md:px-8">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <AnimatedSection animation="fade-in">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-24 text-center tracking-tight">
+            <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-24 leading-[0.9] tracking-tight">
               About Archway
             </h1>
           </AnimatedSection>

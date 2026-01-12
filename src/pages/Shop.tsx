@@ -74,11 +74,11 @@ const Shop = () => {
 
         <div className="py-24 md:py-32 px-4 md:px-8">
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-12">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-4 tracking-tight">
+            <div className="mb-12">
+              <h1 className="text-7xl md:text-9xl lg:text-[8rem] xl:text-[10rem] text-white mb-4 leading-[0.9] tracking-tight">
                 Archway Shop
               </h1>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
                 Exclusive merchandise celebrating independent filmmaking and original storytelling
               </p>
             </div>
