@@ -46,7 +46,7 @@ const Home = () => {
                   <div className="relative z-10">
                     <div className="mb-10">
                       <AnimatedButton to="/investment">
-                        Explore Investment
+                        Explore Partnerships
                       </AnimatedButton>
                     </div>
                     <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
@@ -68,7 +68,7 @@ const Home = () => {
                   <div className="relative z-10">
                     <div className="mb-10">
                       <AnimatedButton to="/collaborators">
-                        Join the Collective
+                        Explore Collaboration
                       </AnimatedButton>
                     </div>
                     <p className="text-lg md:text-xl text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-700">
