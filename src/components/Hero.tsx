@@ -60,7 +60,7 @@ const Hero = () => {
       <section id="intro" className="py-24 md:py-32 px-4 md:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white mb-6 md:mb-8 leading-[0.95] tracking-tight">
-            At <span className="font-semibold">Archway Productions</span>,
+            At <span>Archway Productions</span>,
           </h2>
           <p className="text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] text-white mb-10 md:mb-12 leading-[0.9] tracking-tight">
             The Future Is Not Franchised.
