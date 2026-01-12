@@ -23,7 +23,7 @@ const Hero = () => {
         <div ref={videoRef} className="absolute inset-0" style={{ isolation: 'isolate', transform: `translateY(${videoOffset}px)` }}>
           {/* Fallback image shows while video loads or if it fails */}
           <img
-            src="/assets/hero-fallback.jpg"
+            src="/hero-fallback.jpg"
             alt="Archway Productions"
             className="w-full h-full object-cover"
             width="1920"
@@ -39,7 +39,7 @@ const Hero = () => {
           
           {/* Video plays on both desktop AND mobile */}
           <video
-            src="/assets/hero-video.mp4"
+            src="/hero-video.mp4"
             className="w-full h-full object-cover"
             autoPlay
             loop

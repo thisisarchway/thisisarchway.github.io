@@ -8,4 +8,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  // ADD THESE TWO LINES:
+  publicDir: 'public',
+  build: {
+    assetsInclude: ['**/*.mp4', '**/*.jpg', '**/*.png'],
+  },
 });
