@@ -49,99 +49,85 @@ const Header = () => {
           <div className="flex flex-col items-center">
             {/* Navigation */}
             <nav aria-label="Main navigation">
-              <ul className="space-y-4 md:space-y-6 text-center">
-                <li>
-                  <Link
-                    to="/"
-                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/' ? 'text-gray-400 font-medium' : 'text-white'
-                    }`}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about"
-                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/about' ? 'text-gray-400 font-medium' : 'text-white'
-                    }`}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/projects"
-                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/projects' ? 'text-gray-400 font-medium' : 'text-white'
-                    }`}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/collaborators"
-                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/collaborators' ? 'text-gray-400 font-medium' : 'text-white'
-                    }`}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Collaborate
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/partnership"
-                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/partnership' ? 'text-gray-400 font-medium' : 'text-white'
-                    }`}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Partner
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contact"
-                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/contact' ? 'text-gray-400 font-medium' : 'text-white'
-                    }`}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/shop"
-                    className={`hover:text-gray-300 hover:scale-105 transition-all duration-300 text-lg md:text-lg text-xl block py-2 ${
-                      location.pathname === '/shop' ? 'text-gray-400 font-medium' : 'text-white'
-                    }`}
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    Shop
-                  </Link>
-                </li>
-              </ul>
+<ul className="space-y-4 md:space-y-5 text-center">
+  <li>
+    <Link
+      to="/"
+      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+        location.pathname === '/' ? 'text-white' : 'text-white hover:text-[#ad2e2e]'
+      }`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Home
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="/about"
+      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+        location.pathname === '/about' ? 'text-white' : 'text-white hover:text-[#ad2e2e]'
+      }`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      About
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="/projects"
+      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+        location.pathname === '/projects' ? 'text-white' : 'text-white hover:text-[#a86626]'
+      }`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Projects
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="/collaborators"
+      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+        location.pathname === '/collaborators' ? 'text-white' : 'text-white hover:text-[#d9c926]'
+      }`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Collaborate
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="/partnership"
+      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+        location.pathname === '/partnership' ? 'text-white' : 'text-white hover:text-[#598c63]'
+      }`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Partner
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="/contact"
+      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+        location.pathname === '/contact' ? 'text-white' : 'text-white hover:text-[#1a1a8a]'
+      }`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Contact
+    </Link>
+  </li>
+  <li>
+    <Link
+      to="/shop"
+      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+        location.pathname === '/shop' ? 'text-white' : 'text-white hover:text-[#8f407d]'
+      }`}
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Shop
+    </Link>
+  </li>
+</ul>
             </nav>
           </div>
 

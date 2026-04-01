@@ -9,6 +9,7 @@ interface AnimatedButtonProps {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   gifUrl?: string;
+  disabled?: boolean;
 }
 
 const AnimatedButton: React.FC<AnimatedButtonProps> = ({
@@ -18,11 +19,14 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   onClick,
   className = '',
   type = 'button',
-  gifUrl = 'https://i.imgur.com/bLzVZKt.gif'
+  gifUrl = 'https://i.imgur.com/bLzVZKt.gif',
+  disabled = false
 }) => {
-  const baseClassName = `inline-block bg-white text-black px-10 py-4 font-light text-base tracking-wider hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition-all duration-500 rounded-lg relative overflow-hidden group [&:hover_.hover-text-target]:text-white ${className}`;
+  const baseClassName = `inline-block bg-white text-black px-6 sm:px-10 py-3 sm:py-4 font-zuume tracking-wider hover:bg-gray-200 hover:shadow-2xl hover:scale-105 transition-all duration-500 rounded-lg relative overflow-hidden group [&:hover_.hover-text-target]:text-white ${className}`;
+  const buttonTextClassName = `text-xl sm:text-2xl md:text-3xl font-bold italic`;
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
+    if (disabled) return;
     e.currentTarget.style.backgroundImage = `url('${gifUrl}')`;
     e.currentTarget.style.backgroundSize = '100% 100%';
     e.currentTarget.style.backgroundPosition = 'center';
@@ -30,11 +34,12 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
+    if (disabled) return;
     e.currentTarget.style.backgroundImage = 'none';
   };
 
   const content = (
-    <span className="relative z-10 text-black hover-text-target transition-colors duration-500">
+    <span className={`relative z-10 text-black hover-text-target transition-colors duration-500 ${buttonTextClassName}`}>
       {children}
     </span>
   );
@@ -73,6 +78,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
       onClick={onClick}
       className={baseClassName}
       style={{ backgroundImage: 'none' }}
+      disabled={disabled}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

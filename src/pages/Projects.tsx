@@ -8,6 +8,14 @@ import { useParallax } from '../hooks/useParallax';
 
 const Projects = () => {
   const projects = [
+   {
+  title: "SOMEDAY",
+  category: "Feature",
+  status: "Filming Summer 2026",
+  description: "SOMEDAY follows James, Sara, and Eric on the last day of summer, as they each embark on separate misadventures in their small town. They intersect and collide with enemies, lovers, and each other, experiencing all the highs and lows of being a teenager in a 24 hour period.",
+  image: "/someday..png",
+  credit: "Story By: Dan Chen"
+},
     {
       title: "Vital",
       category: "Pilot",

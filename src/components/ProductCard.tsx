@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </span>
           </div>
         )}
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+        <div className="absolute inset-0 bg-[#2c2c2c]/20 group-hover:bg-[#2c2c2c]/10 transition-colors duration-300" />
       </div>
 
       <div className="p-6">

@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
-        'display': ['Playfair Display', 'serif'],
+        'sans': ['Source Serif 4', 'serif'],
+        'serif': ['Zuume', 'sans-serif'],
+        'display': ['Zuume', 'sans-serif'],
+        'zuume': ['Zuume', 'sans-serif'],
       },
       fontWeight: {
         'thin': '100',
@@ -13,6 +15,9 @@ export default {
         'normal': '400',
         'medium': '500',
         'semibold': '600',
+        'bold': '700',
+        'extrabold': '800',
+        'black': '900',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',

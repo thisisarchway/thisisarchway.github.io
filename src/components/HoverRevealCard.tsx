@@ -46,8 +46,8 @@ const HoverRevealCard: React.FC<HoverRevealCardProps> = ({
         }
       }}
     >
-      <div className={`absolute inset-0 bg-black/70 group-hover:bg-black/85 transition-colors duration-300 ${
-        isActive ? 'bg-black/85' : ''
+      <div className={`absolute inset-0 bg-[#2c2c2c]/70 group-hover:bg-[#2c2c2c]/85 transition-colors duration-300 ${
+        isActive ? 'bg-[#2c2c2c]/85' : ''
       }`} />
 
       <h3 className={`${titleClasses} text-white text-center group-hover:scale-95 group-hover:translate-y-2 group-hover:opacity-0 transition-all duration-300 absolute inset-0 flex items-center justify-center tracking-wide px-4 leading-tight z-10 ${
