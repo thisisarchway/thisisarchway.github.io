@@ -116,17 +116,19 @@ const Header = () => {
       Contact
     </Link>
   </li>
-  <li>
-    <Link
-      to="/shop"
-      className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
-        location.pathname === '/shop' ? 'text-white' : 'text-white hover:text-[#8f407d]'
-      }`}
-      onClick={() => setIsMenuOpen(false)}
-    >
-      Shop
-    </Link>
-  </li>
+ <li>
+  <a
+    href="https://archway-shop.fourthwall.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`font-zuume font-bold italic tracking-wider text-2xl md:text-3xl block py-2 transition-all duration-300 hover:scale-105 ${
+      location.pathname === '/shop' ? 'text-white' : 'text-white hover:text-[#8f407d]'
+    }`}
+    onClick={() => setIsMenuOpen(false)}
+  >
+    Shop
+  </a>
+</li>
 </ul>
             </nav>
           </div>
