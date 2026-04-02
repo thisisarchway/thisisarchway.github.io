@@ -16,17 +16,17 @@ const About = () => {
     <Layout>
       <div className="min-h-screen bg-black">
       <Helmet>
-        <title>About Archway Productions - Gen Z Media Company</title>
-        <meta name="description" content="Founded in 2024 by young entertainment industry professionals, Archway Productions is redefining how stories get made, from concept to screen." />
+        <title>About Archway Productions - Film & Television Studio</title>
+        <meta name="description" content="Founded in 2024, Archway Productions is a New York-based film and television studio developing original work grounded in contemporary life." />
         <link rel="canonical" href="https://thisisarchway.com/about" />
-        <meta property="og:title" content="About Archway Productions - Gen Z Media Company" />
-        <meta property="og:description" content="Founded in 2024 by young entertainment industry professionals, Archway Productions is redefining how stories get made, from concept to screen." />
+        <meta property="og:title" content="About Archway Productions - Film & Television Studio" />
+        <meta property="og:description" content="Archway Productions develops original work grounded in the realities, anxieties, humor, and contradictions of contemporary life." />
         <meta property="og:image" content="https://thisisarchway.com/logo.jpg" />
         <meta property="og:url" content="https://thisisarchway.com/about" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Archway Productions - Gen Z Media Company" />
-        <meta name="twitter:description" content="Founded in 2024 by young entertainment industry professionals, Archway Productions is redefining how stories get made, from concept to screen." />
+        <meta name="twitter:title" content="About Archway Productions - Film & Television Studio" />
+        <meta name="twitter:description" content="Archway Productions develops original work grounded in contemporary life." />
         <meta name="twitter:image" content="https://thisisarchway.com/logo.jpg" />
       </Helmet>
       <StructuredDataAbout />
@@ -43,7 +43,7 @@ const About = () => {
           <div className="space-y-12 text-gray-300">
             <AnimatedSection animation="fade-up" delay={100}>
               <p className="text-2xl md:text-3xl leading-relaxed font-light text-gray-400">
-                Founded in 2024 by entertainment industry professionals who grew up with VHS but came of age online, Archway Productions is a project incubator and production company redefining how stories get made—from concept to screen.
+                Founded in 2024 by entertainment industry professionals who grew up with VHS but came of age online, Archway Productions is a New York-based film and television studio developing original work grounded in the realities, anxieties, humor, and contradictions of contemporary life.
               </p>
             </AnimatedSection>
 
@@ -53,21 +53,22 @@ const About = () => {
                   title="The Problem"
                   backgroundImage="https://i.imgur.com/anivm9t.jpeg"
                 >
-                <p className="text-lg font-normal text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                  Gen Z runs culture, but Hollywood still won't hand over the keys.
+                <p className="text-white font-zuume font-medium text-2xl md:text-3xl leading-loose tracking-wide mb-6 text-center hyphens-auto break-words text-white/90">
+                  Projects are frequently evaluated through outdated assumptions about audience behavior, despite clear evidence that viewers respond to originality, specificity, and strong points of view.
                 </p>
-                <ul className="space-y-3 text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+                <div className="border-t border-white/20 my-6"></div>
+                <ul className="space-y-4 text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    Studios want our attention, but will not let us in the rooms where decisions are made.
+                    <span>Many of the people deciding what gets made are increasingly far removed from the audiences they aim to reach, resulting in a narrowing definition of what is considered "relatable" or "marketable."</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    Young creators are told to "wait their turn", accept unsustainable wages, or rely on connections many will never have.
+                    <span>Structural barriers still limit who is able to sustain careers in the industry, preventing many distinct perspectives from reaching positions where they can shape what gets produced.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    This shuts out important stories from diverse backgrounds before they can even be pitched.
+                    <span>Films outside of franchise or microbudget extremes, the exact kind of projects that once defined the independent film landscape, are becoming more difficult to finance.</span>
                   </li>
                 </ul>
               </HoverRevealCard>
@@ -78,21 +79,22 @@ const About = () => {
                   title="The Landscape"
                   backgroundImage="https://i.imgur.com/zsLoXjc.jpeg"
                 >
-                <p className="text-lg font-normal text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                  Millions of likes, followers, and shares. Zero power.
+                <p className="text-white font-zuume font-medium text-2xl md:text-3xl leading-loose tracking-wide mb-6 text-center hyphens-auto break-words text-white/90">
+                  Projects that understand their audience early are better positioned to create meaningful anticipation and give viewers a reason to show up, share, and return.
                 </p>
-                <ul className="space-y-3 text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+                <div className="border-t border-white/20 my-6"></div>
+                <ul className="space-y-4 text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    When platforms are democratized, we shape culture and language in real time without permission.
+                    <span>A generation raised online engages with film and television as active participants rather than passive viewers. When viewers connect with a project, engagement extends beyond the screen through discussion, fan-created media, fashion, music, and in-person events.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    Imagine what an online creator with millions of followers could do with a budget, access, and full support.
+                    <span>Audiences are highly attuned to authenticity, and online conversation can rapidly influence perception. This can either strengthen enthusiasm or undermine trust.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    No one is telling our stories on screen with the authenticity we crave, yet studios keep pushing bad remakes and wondering why they flop.
+                    <span>Films and series now have the ability to build cultural presence before and after release, allowing strong work to sustain relevance beyond opening weekend.</span>
                   </li>
                 </ul>
               </HoverRevealCard>
@@ -103,21 +105,22 @@ const About = () => {
                   title="The Solution"
                   backgroundImage="https://i.imgur.com/xiAkqKh.jpeg"
                 >
-                <p className="text-lg font-normal text-white mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                  Archway is a new kind of media company — by us, for all.
+                <p className="text-white font-zuume font-medium text-2xl md:text-3xl leading-loose tracking-wide mb-6 text-center hyphens-auto break-words text-white/90">
+                  By aligning creative ambition with sustainable pathways to production and distribution, we aim to contribute to a healthier long-term ecosystem for filmmakers and audiences alike.
                 </p>
-                <ul className="space-y-3 text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+                <div className="border-t border-white/20 my-6"></div>
+                <ul className="space-y-4 text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    In a world drowning in artificiality, we actively develop, fund, and produce original stories from the next wave of creators.
+                    <span>Archway operates as both studio and strategic partner, identifying projects with strong creative foundations and meaningful audience potential. We collaborate with filmmakers to help structure financing and partnerships that expand what is possible for a project without diluting its perspective.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    Our model is good for business in an industry so risk-averse it's falling behind; we are filling a long-overlooked gap and doing it well.
+                    <span>Thoughtful brand alignment can provide access to resources that allow ambitious work to be executed at a higher level while maintaining creative independence.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0 group-hover:bg-gray-300 transition-colors duration-300"></span>
-                    We are done waiting for Hollywood to hand over the keys. We have become the key.
+                    <span>Revenue generated through partnerships and project participation is reinvested into original storytelling, supporting the development of a slate guided by conviction rather than short-term trend cycles.</span>
                   </li>
                 </ul>
               </HoverRevealCard>

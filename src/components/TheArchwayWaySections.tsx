@@ -6,30 +6,30 @@ const TheArchwayWaySections = () => {
 
   const principles = [
     {
-      title: "Original Voices, Original Visions",
+      title: "Timely Stories with Timeless Resonance",
       description:
-        "Archway champions the voices shaping culture in real time. We work with emerging creators from Gen Z and underrepresented communities to develop projects that capture the chaos, urgency, and possibility of our era. Our mission is to protect originality, nurture new talent, and create work that meets the moment head-on.",
+        "We develop projects that engage directly with the complexities of contemporary life, capturing the tension, humor, uncertainty, and possibility of today. The most compelling work does more than reflect the present; it interrogates it. Stories unafraid to explore dynamics shaping modern life, from shifting social norms to evolving expressions of power, identity, and inequality, often reveal emotional truths that remain relevant long after the moment that inspired them has passed. Narratives that feel unmistakably timely, yet remain wholly timeless, are the core of Archway.",
       icon: <Feather className="w-10 h-10 text-white" />,
       backgroundImage: "https://i.imgur.com/qIn73c9.jpeg",
     },
     {
-      title: "Funding the Zeitgeist",
+      title: "An Understanding from the Inside",
       description:
-        "Archway uses a venture arts investment model that fuels not just individual films, but a long-term cultural engine. In return, investors gain access to stories and creators that influence trends, conversations, and social behavior as it unfolds.",
+        "Many assumptions about younger audiences are shaped from the outside looking in. Despite sky-high theatrical attendance and clear demand for meaningful long-form storytelling, decision makers removed from these communities often misinterpret online media consumption as diminished interest in film and television. As a Gen Z owned and operated studio, Archway understands that social media is not the competition— it's the launchpad. We consider audience pathways early, helping projects build anticipation, invite participation, and sustain engagement across platforms and communities.",
       icon: <DollarSign className="w-10 h-10 text-white" />,
       backgroundImage: "https://i.imgur.com/ITXcIT1.jpeg",
     },
     {
-      title: "Built by the Internet Generation",
+      title: "The Right Partners for the Right Now",
       description:
-        "Online spaces dominate Gen Z media consumption. At Archway, social media isn't the competition — it's the launchpad. We bring internet-native voices back into traditional media worth showing up for.",
+        "By identifying aligned partners whose involvement can meaningfully expand what is possible for a project financially, creatively, and practically, we help filmmakers produce the stories modern audiences are actively seeking, but that traditional systems often overlook. A partner only makes sense if they genuinely fit a project's creative DNA. Without that alignment, we do not move forward. For brands, investors, and organizations with that natural fit, credibility with younger markets is earned through participation, signaling that our stories and perspectives are worth investing in.",
       icon: <Globe className="w-10 h-10 text-white" />,
       backgroundImage: "https://i.imgur.com/5ac0Okz.jpeg",
     },
     {
-      title: "Not Another Sequel",
+      title: "Rebuild, Reinvest, Repeat",
       description:
-        "Audiences are tired of recycled IP and are searching for new narratives. Betting on originality isn't risky — it's necessary. We believe not taking a chance on new voices is the biggest risk of all.",
+        "In a market fatigued by familiar franchises, long-term sustainability depends on more than recycling existing IP. A healthy creative ecosystem requires consistent support for original ideas that reflect evolving audience realities. Rather than waiting for the industry to shift, Archway's model demonstrates why supporting new voices is both a creative and strategic advantage. Revenue generated through successful partnerships and projects is reinvested into more resonant work, with each project contributing to growing proof that originality is viable, valuable, and vital.",
       icon: <Lightbulb className="w-10 h-10 text-white" />,
       backgroundImage: "https://i.imgur.com/g1L0EpU.jpeg",
     },
